@@ -1,0 +1,688 @@
+{
+  "HomeSlider": [
+    {
+      "id": "0",
+      "imageurl": "https://ithinkbigger.com/wp-content/uploads/2022/03/eCommerce-Website-Components-photo.jpg",
+      "slidetitle": "Hurry Up",
+      "slidesubtitle": "Get Upto 50% Off On All Products"
+    },
+    {
+      "id": "1",
+      "imageurl": "https://cdn.shopify.com/s/files/1/0582/0406/1873/files/Apparel-01-min.jpg?v=1638470669",
+      "slidetitle": "Best Mens Cloths",
+      "slidesubtitle": "Get Best Deals And Offers"
+    },
+    {
+      "id": "2",
+      "imageurl": "https://media-exp2.licdn.com/dms/image/C4E1BAQGU5aBOkBnOKQ/company-background_10000/0/1570667445517?e=2147483647&v=beta&t=4zTBTAcEJK0o9lljORVaUXfy03UBuD4xmBQUZySaBIM",
+      "slidetitle": "Best Womens Cloths",
+      "slidesubtitle": "Get Best Offers And Up To 50% Off Hurry Up Sale End Soon"
+    },
+    {
+      "id": "3",
+      "imageurl": "https://www.baero.com/fileadmin/Retail%20Lighting/Bilder/Stage/baero_anwendungsbereiche_fashionundtextil_stage.jpg",
+      "slidetitle": "Best Kids Cloths",
+      "slidesubtitle": "Get Best Deals And Offers "
+    },
+    {
+      "id": "Nw57U2H"
+    }
+  ],
+  "Mensliderdata": [
+    {
+      "id": "0",
+      "productname": "Classic Spring",
+      "Productbrand": "allen solly",
+      "productprice": " 3499",
+      "productimageurl": "https://images.unsplash.com/photo-1617137968427-85924c800a22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVucyUyMGZhc2hpb258ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      "productdiscraption": "best cloths for men"
+    },
+    {
+      "id": "1",
+      "productname": "Classic Stome",
+      "Productbrand": "Jack & Jons",
+      "productprice": " 1900",
+      "productimageurl": "https://www.universityoffashion.com/blog/wp-content/uploads/2021/07/A-look-from-Brionis-Spring-2022-Collection.-Photo-Credit-Brioni.-scaled.jpg",
+      "productdiscraption": "best cloths for men"
+    },
+    {
+      "id": "2",
+      "productname": "Air Force 1 X",
+      "Productbrand": "Jack & Jons",
+      "productprice": " 2499",
+      "productimageurl": "https://img.freepik.com/free-photo/man-portrait_1296-626.jpg?w=2000",
+      "productdiscraption": "best cloths for men"
+    },
+    {
+      "id": "3",
+      "productname": "Love Nani ' 20",
+      "Productbrand": "Peater England",
+      "productprice": " 999",
+      "productimageurl": "https://i.pinimg.com/736x/66/1e/39/661e39d2aac31147c75efe1515fe8d61.jpg",
+      "productdiscraption": "best cloths for men"
+    },
+    {
+      "id": "4",
+      "productname": "Lost Stack",
+      "Productbrand": "Lavi's",
+      "productprice": " 1299",
+      "productimageurl": "https://i.pinimg.com/736x/63/bc/04/63bc04d4c8bbc36c9fa60fca15001b36.jpg",
+      "productdiscraption": "best cloths for men"
+    },
+    {
+      "id": "5",
+      "productname": "Classy Style",
+      "productbrand": "Allen Solly",
+      "productprice": " 1799",
+      "productimageurl": "https://www.tiptopgents.com/wp-content/uploads/2022/06/picsart_22-06-23_13-17-03-2948685519744956187826.webp",
+      "productdiscraption": "best cloths for men"
+    }
+  ],
+  "Womensliderdata": [
+    {
+      "id": "0",
+      "productname": "Popsuger",
+      "productbrand": "BIBA",
+      "productprice": " 1599",
+      "productimageurl": "https://media1.popsugar-assets.com/files/thumbor/UPEB-LvSoc7hr_gJkASisJ8m9ow/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2014/05/19/829/n/1922564/e11061fd0ec3ed21_151989639/i/Youre-girl-all-your-friends-come-when-new-trend-pops-up.jpg",
+      "productdiscraption": "best cloths for women"
+    },
+    {
+      "id": "1",
+      "productname": "Trousers",
+      "productprice": " 999",
+      "productbrand": "Aurelia",
+      "productimageurl": "https://i.pinimg.com/736x/b5/d1/8c/b5d18c8da3a752a13160218bd3e942ed.jpg",
+      "productdiscraption": "best cloths for women"
+    },
+    {
+      "id": "2",
+      "productname": "Salwar-suti",
+      "productprice": " 1599",
+      "productbrand": "ONLY",
+      "productimageurl": "https://i.pinimg.com/474x/a4/56/ac/a456ac8c451bfe86478d2bab9c821331.jpg",
+      "productdiscraption": "best cloths for women"
+    },
+    {
+      "id": "3",
+      "productname": "Jeans-Tshirt",
+      "productprice": " 899",
+      "productbrand": "Levi's",
+      "productimageurl": "https://media1.popsugar-assets.com/files/thumbor/AxpC_IMxOXTSOdhghlHoxJQlR3A/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2014/05/28/849/n/1922564/6e2d079f47c0f709_imaxtree/i/Master-Basics-First.jpg",
+      "productdiscraption": "best cloths for women"
+    },
+    {
+      "id": "4",
+      "productname": "Chic Outfit",
+      "productprice": " 1299",
+      "productbrand": "AND",
+      "productimageurl": "https://publish.purewow.net/wp-content/uploads/sites/2/2022/05/june-outfit-ideas-2022-all-black-outfit.jpg",
+      "productdiscraption": "best cloths for women"
+    },
+    {
+      "id": "5",
+      "productname": "Jumpsuti",
+      "productprice": " 1399",
+      "productbrand": "VERO MODA",
+      "productimageurl": "https://rukminim1.flixcart.com/image/832/832/xif0q/jumpsuit/x/i/6/s-bvjs1007-belavine-original-imagmw98v2ehs4ne.jpeg?q=70",
+      "productdiscraption": "best cloths for women"
+    }
+  ],
+  "Kidsliderdata": [
+    {
+      "id": "0",
+      "productname": "Casual",
+      "productprice": " 899",
+      "productbrand": "American Apparel",
+      "productimageurl": "https://images.kapsonsonline.com/kopl/images/GAS%20KIDS/410317150_0001/410317150_0001_1.jpg",
+      "productdiscraption": "best cloths for kids"
+    },
+    {
+      "id": "1",
+      "productname": "Boys-Traditional",
+      "productprice": " 1299",
+      "productbrand": "Janie and Jack",
+      "productimageurl": "https://ninecolours.s3.ap-south-1.amazonaws.com/image/cache/products-2018/Nov-2021/Handloom-Silk-Kurta-Pajama-In-Light-Brown-Colour-BK2710911-A-1200x1799.webp",
+      "productdiscraption": "best cloths for kids"
+    },
+    {
+      "id": "2",
+      "productname": "Summer-ware",
+      "productprice": " 599",
+      "productbrand": "H&M Kids",
+      "productimageurl": "https://images.squarespace-cdn.com/content/v1/559c4026e4b0b05c516049a2/1652107082005-75O9TI9SFX1E7C0ROCDA/DSC_3949.jpg",
+      "productdiscraption": "best cloths for kids"
+    },
+    {
+      "id": "3",
+      "productname": "Winter-ware",
+      "productprice": " 799",
+      "productbrand": "Old Navy Kids",
+      "productimageurl": "https://res.cloudinary.com/purnesh/image/upload/w_540,f_auto,q_auto:eco,c_limit/11638777094448.jpg",
+      "productdiscraption": "best cloths for kids"
+    },
+    {
+      "id": "4",
+      "productname": "Kids-Shorts",
+      "productprice": " 299",
+      "productbrand": "Pumpkin Patch Kids",
+      "productimageurl": "https://asset1.cxnmarksandspencer.com/is/image/mands/SD_04_T87_3031V_E0_X_EC_0?wid=1024&qlt=80",
+      "productdiscraption": "best cloths for kids"
+    },
+    {
+      "id": "5",
+      "productname": "Girls-Traditional",
+      "productprice": " 1599",
+      "productbrand": "Tea Collection",
+      "productimageurl": "https://i.pinimg.com/236x/63/9b/e1/639be1b614c3eeb24b1f67e24ed92e0b.jpg",
+      "productdiscraption": "best cloths for kids"
+    }
+  ],
+  "Ourteamcarddata": [
+    {
+      "id": "0",
+      "photo": "https://images.unsplash.com/photo-1659333092645-0da4df62daa4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHw%3D&w=1000&q=80",
+      "name": "Jiya Sinoya",
+      "post": "Marketing Head"
+    },
+    {
+      "id": "1",
+      "photo": "https://images.pexels.com/photos/842811/pexels-photo-842811.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-842811.jpg&fm=jpg",
+      "name": "Rembo Diza",
+      "post": "Creatore"
+    },
+    {
+      "id": "2",
+      "photo": "https://burst.shopifycdn.com/photos/bearded-young-man.jpg?width=1200&format=pjpg&exif=1&iptc=1",
+      "name": "Jemmy Roy",
+      "post": "Producion Head"
+    }
+  ],
+  "Ourbrands": [
+    {
+      "id": 0,
+      "image": "https://assets.turbologo.com/blog/en/2019/10/19084949/chanel-logo-illustration-958x575.jpg",
+      "brandname": "chanel"
+    },
+    {
+      "id": 1,
+      "image": "https://cdn.logojoy.com/wp-content/uploads/2018/05/30143359/2_big1.png",
+      "brandname": "adidas"
+    },
+    {
+      "id": 2,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKsfNjArDCu_twsJ4Uy_53s2Ex4C_Bc1R01w&usqp=CAU",
+      "brandname": "tommy hilfiger"
+    },
+    {
+      "id": 3,
+      "image": "https://image.fresherslive.com/latestnews/2023/03/giorgio-armani-642560c2d922f87592798-900.webp",
+      "brandname": "giorgio armani"
+    },
+    {
+      "id": 4,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmAZ3ibGPIIefPGBsIWPnnQV_BxhNT4mWRsEaKlrjblfG4e_zL0oCgeQHzewz8tFInu2U&usqp=CAU",
+      "brandname": "boos"
+    },
+    {
+      "id": 5,
+      "image": "https://image.fresherslive.com/latestnews/2023/03/-dolce--642560c2d922f95692300-900.webp",
+      "brandname": "dolce & gabbana"
+    },
+    {
+      "id": 6,
+      "image": "https://assets.turbologo.ru/blog/ru/2021/11/12082225/Levis_logo.png",
+      "brandname": "Lavi's"
+    },
+    {
+      "id": 7,
+      "image": "https://images-cdn.ubuy.co.in/6351dcb31b0725417f0531d8-u-s-polo-assn-girls-39-school.jpg",
+      "brandname": "us polo"
+    },
+    {
+      "id": 8,
+      "image": "https://businesstalkmagazine.com/wp-content/uploads/2022/05/Allen-Solly.jpg",
+      "brandname": "allen solly"
+    },
+    {
+      "id": 9,
+      "image": "https://images-platform.99static.com/PEg4SNAR9Tf5hkfr62D4RVw2a-Q=/500x500/top/smart/99designs-contests-attachments/45/45279/attachment_45279240",
+      "brandname": "louis philippe"
+    },
+    {
+      "id": 10,
+      "image": "https://www.logolynx.com/images/logolynx/74/7476d45ced6a8a7cb5b4ae7f61cf8016.jpeg",
+      "brandname": "H & M"
+    },
+    {
+      "id": 11,
+      "image": "https://wallpapercave.com/wp/wp2013016.png",
+      "brandname": "calvin klein"
+    }
+  ],
+  "Ourservicecarddata": [
+    {
+      "id": "0",
+      "heading": "After Sels Service",
+      "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo impedit facilis quidem? Id eius nobis quia adipisci ab, perferendis quidem eligendi tenetur esse vitae, nam labore ipsa dolore qui aliquam.",
+      "picture": " https://lh6.googleusercontent.com/p4pSXNcXhdn_ajh44r_ucBOcfiQr-shiD7PyTSL18zCqWHraCTFlYzgIC_h03Vs1_J_jrcXKQa0Y1UziTKXB6KQbIZwI10HVWfBjaoX_1kavV0Lxvn0Kq3XUfj_xxsCwYG1YrgEKzKfXYvQhuQjfG4a1eGB_ZHZxLAW-x2oKFULBIddiSji4Pz3yFQhVL2JLtRf84DqiCQ"
+    },
+    {
+      "id": "1",
+      "heading": " 24 x 7 Support ",
+      "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo impedit facilis quidem? Id eius nobis quia adipisci ab, perferendis quidem eligendi tenetur esse vitae, nam labore ipsa dolore qui aliquam.",
+      "picture": "https://img.freepik.com/free-vector/twenty-four-service_1017-30335.jpg?w=2000"
+    },
+    {
+      "id": "2",
+      "heading": " Tracking ",
+      "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo impedit facilis quidem? Id eius nobis quia adipisci ab, perferendis quidem eligendi tenetur esse vitae, nam labore ipsa dolore qui aliquam.",
+      "picture": "https://www.kizytracking.com/wp-content/uploads/2020/11/proactive-scm-supply-chain-webinar-kizy-tracking-scaled.jpg"
+    }
+  ],
+  "Contactusdata": [
+    {
+      "firstname": "divyesh",
+      "lastname": "patel",
+      "email": "divyesh24@gmail.com",
+      "mobile": "9924813919",
+      "message": "hellow, can we meet?",
+      "id": 1
+    },
+    {
+      "firstname": "divya",
+      "lastname": "patel",
+      "email": "divya26@gmail.com",
+      "mobile": "9874584630",
+      "message": "hellow, can we meet?",
+      "id": 2
+    },
+    {
+      "firstname": "dhaval",
+      "lastname": "patel",
+      "email": "dhaval09@gmail.com",
+      "mobile": " 9825166515",
+      "message": "hellow sir",
+      "id": 3
+    },
+    {
+      "firstname": "priya",
+      "lastname": "desai",
+      "email": "pd24@gmail.com",
+      "mobile": "9325680147",
+      "message": "hellow",
+      "id": 4
+    },
+    {
+      "firstname": "riya",
+      "lastname": "patel",
+      "email": "riyab26@gmail.com",
+      "mobile": "9054215952",
+      "message": "hellow, can we meet?",
+      "id": 5
+    },
+    {
+      "firstname": "charan",
+      "lastname": "patel",
+      "email": "charanpatel24@gmail.com",
+      "mobile": "9858746314",
+      "message": "lets discuss project",
+      "id": 6
+    },
+    {
+      "firstname": "ewa",
+      "lastname": "makvana",
+      "email": "ewa762GMAIL.COM",
+      "mobile": "8523697014",
+      "message": "hellow ",
+      "id": 7
+    },
+    {
+      "firstname": "divyesh",
+      "lastname": "patel",
+      "email": "divyesh24@gmail.com",
+      "mobile": "9924813918",
+      "message": "hellow, can we meet?",
+      "id": 8
+    },
+    {
+      "firstname": "raj",
+      "lastname": "patil",
+      "email": "raj09@gmail.com",
+      "mobile": "9254781306",
+      "message": "hellow sir",
+      "id": 9
+    },
+    {
+      "firstname": "priya",
+      "lastname": "desai",
+      "email": "pd24@gmail.com",
+      "mobile": "9325680147",
+      "message": "hellow",
+      "id": 10
+    },
+    {
+      "firstname": "paras",
+      "lastname": "vekriya",
+      "email": "paras43@gmail.com",
+      "mobile": "9630125478",
+      "message": "help me to track my order",
+      "id": 11
+    },
+    {
+      "firstname": "axit",
+      "lastname": "vamja",
+      "email": "axiy32@gmail.com",
+      "mobile": "9520143670",
+      "message": "help me to creat account",
+      "id": 12
+    },
+    {
+      "firstname": "dhaval",
+      "lastname": "kanjariya",
+      "email": "dhaval65@gmail.com",
+      "mobile": "7852014963",
+      "message": "hellow, i want to try create account but i can't help my to create account.",
+      "id": 13
+    }
+  ],
+  "AddState": [
+    {
+      "state": "Gujarat",
+      "id": 1
+    },
+    {
+      "state": "Rajesthan",
+      "id": 2
+    },
+    {
+      "state": "Delhi",
+      "id": 3
+    }
+  ],
+  "AddCity": [
+    {
+      "state": "Gujarat",
+      "city": "Junagadh",
+      "id": 1
+    },
+    {
+      "state": "Gujarat",
+      "city": "Ahmedabad",
+      "id": 2
+    },
+    {
+      "state": "Rajesthan",
+      "city": "Nathdwar",
+      "id": 3
+    },
+    {
+      "state": "Gujarat",
+      "city": "rajkot",
+      "id": 4
+    },
+    {
+      "state": "Delhi",
+      "city": "Delhi",
+      "id": 5
+    },
+    {
+      "state": "Rajesthan",
+      "city": "Jaipur",
+      "id": 6
+    },
+    {
+      "state": "Rajesthan",
+      "city": "udaipur",
+      "id": 7
+    }
+  ],
+  "Accountdata": [
+    {
+      "username": "divyesh26",
+      "email": "divyesh32@gmail.com",
+      "password": "div582",
+      "confirmpassword": "div582",
+      "dateofbirth": "2001-07-29",
+      "state": "gujarat",
+      "city": "Rajkot",
+      "gender": "male",
+      "id": 1
+    },
+    {
+      "username": "divya",
+      "email": "divya32@gmail.com",
+      "password": "divya582",
+      "confirmpassword": "divya582",
+      "dateofbirth": "2001-02-26",
+      "gender": "female",
+      "state": "gujarat",
+      "city": "Ahmedabad",
+      "id": 2
+    },
+    {
+      "username": "dinesh",
+      "email": "dinesh58@gmail.com",
+      "password": "dinesh58",
+      "confirmpassword": "dinesh58",
+      "dateofbirth": "2001-02-26",
+      "gender": "male",
+      "state": "gujarat",
+      "city": "Junagadh",
+      "id": 3
+    },
+    {
+      "username": "deep26",
+      "email": "deep32@gmail.com",
+      "password": "deep582",
+      "confirmpassword": "deep582",
+      "dateofbirth": "1999-04-26",
+      "gender": "male",
+      "state": "Rajesthan",
+      "city": "Nathdwar",
+      "id": 4
+    },
+    {
+      "username": "jiya43",
+      "email": "jiya43@gmail.com",
+      "password": "jiya582",
+      "confirmpassword": "jiya582",
+      "dateofbirth": "1984-03-26",
+      "gender": "female",
+      "state": "Delhi",
+      "city": "Delhi",
+      "id": 5
+    },
+    {
+      "username": "puja007",
+      "email": "puja@23gmail.com",
+      "password": "pu456",
+      "confirmpassword": "pu456",
+      "dateofbirth": "1999-02-10",
+      "gender": "female",
+      "state": "gujarat",
+      "city": "Surat",
+      "id": 6
+    },
+    {
+      "username": "baburaw",
+      "state": "gujarat",
+      "city": "jamnagar",
+      "email": "baburaw23@gmail.com",
+      "password": "babu23",
+      "confirmpassword": "babu23",
+      "dateofbirth": "1993-07-20",
+      "gender": "male",
+      "id": 7
+    },
+    {
+      "username": "raju",
+      "state": "gujarat",
+      "city": "mandvi",
+      "email": "raju34@gmail.com",
+      "password": "raju34",
+      "confirmpassword": "raju34",
+      "dateofbirth": "1995-05-04",
+      "gender": "male",
+      "id": 8
+    },
+    {
+      "username": "payal",
+      "state": "Gujarat",
+      "city": "rajkot",
+      "email": "payal16@gmail.com",
+      "password": "payal16",
+      "confirmpassword": "payal16",
+      "dateofbirth": "1997-02-26",
+      "gender": "female",
+      "id": 9
+    },
+    {
+      "username": "Rina",
+      "state": "gujarat",
+      "city": "Morbi",
+      "email": "rina21@gmail.com",
+      "password": "rina12",
+      "confirmpassword": "rina21",
+      "dateofbirth": "2000-01-29",
+      "gender": "female",
+      "id": 10
+    },
+    {
+      "username": "Janak",
+      "state": "gujarat",
+      "city": "Rajkot",
+      "email": "janak09@gmail.com",
+      "password": "janak09",
+      "confirmpassword": "janak09",
+      "dateofbirth": "2002-09-12",
+      "gender": "male",
+      "id": 11
+    },
+    {
+      "username": "raj",
+      "state": "Rajesthan",
+      "city": "Nathdwar",
+      "email": "rajpatel32@gmail.com",
+      "password": "raj32",
+      "confirmpassword": "raj32",
+      "dateofbirth": "2021-02-25",
+      "gender": "male",
+      "id": 12
+    },
+    {
+      "username": "riya",
+      "state": "Delhi",
+      "city": "Delhi",
+      "email": "riyu32@gmail.com",
+      "password": "riyu32",
+      "confirmpassword": "riyu32",
+      "dateofbirth": "2001-07-19",
+      "gender": "female",
+      "id": 13
+    },
+    {
+      "username": "brijesh",
+      "state": "Gujarat",
+      "city": "Ahmedabad",
+      "email": "brijesh234@gmil.com",
+      "password": "brijesh234",
+      "confirmpassword": "brijesh234",
+      "dateofbirth": "1990-12-23",
+      "gender": "male",
+      "id": 14
+    },
+    {
+      "username": "shivam",
+      "state": "Rajesthan",
+      "city": "Nathdwar",
+      "email": "sdube1997@gmail.com",
+      "password": "shivam19917",
+      "confirmpassword": "shivam1997",
+      "dateofbirth": "1997-01-03",
+      "gender": "male",
+      "id": 15
+    }
+  ],
+  "Product": [
+    {
+      "id": 1,
+      "productname": "mens cloths",
+      "productbrand": "allen solly",
+      "productprice": "2599",
+      "productimageurl": "https://i.pinimg.com/236x/8a/ca/54/8aca540ee746b36c43301e358bb1c110.jpg",
+      "productdiscraption": "best mens cloths"
+    },
+    {
+      "productname": "shirt",
+      "productbrand": "Tommy Hillfly",
+      "productprice": "999",
+      "productimageurl": "https://nextluxury.com/wp-content/uploads/Office-Mens-Formal-Wear-1.jpg",
+      "productdiscraption": "best quality black men shirt",
+      "id": 2
+    }
+  ],
+  "Footer": [
+    {
+      "id": 1,
+      "year": "2023"
+    }
+  ],
+  "AddCategories": [
+    {
+      "categoryname": "Mens",
+      "categorydate": "2023-07-01",
+      "categorydescraption": "Best cloths for mens.",
+      "id": 1
+    },
+    {
+      "categoryname": "Womens",
+      "categorydate": "2023-07-02",
+      "categorydescraption": "Best cloths for womens.",
+      "id": 2
+    },
+    {
+      "categoryname": "Kids",
+      "categorydate": "2023-07-03",
+      "categorydescraption": "Best Kids summer collection",
+      "id": 3
+    }
+  ],
+  "AddSubCategories": [
+    {
+      "categoryname": "Mens ",
+      "subcategoryname": "Winter Cloths",
+      "subcategorydate": "2023-07-27",
+      "subcategorydescraption": "best collection for winter for men",
+      "id": 1
+    },
+    {
+      "categoryname": "Womens",
+      "subcategoryname": "Winter Cloths",
+      "subcategorydate": "2023-07-21",
+      "subcategorydescraption": "Best quality womens winter cloths",
+      "id": 2
+    },
+    {
+      "categoryname": "Kids ",
+      "subcategoryname": "kids winter collection",
+      "subcategorydate": "2023-07-28",
+      "subcategorydescraption": "best collection for winter for Kids",
+      "id": 3
+    }
+  ],
+  "AddProducts": [
+    {
+      "addcategoriename": "mens products",
+      "addsubcategoriename": "Mens-winter-Jackets",
+      "productname": "jackets",
+      "productimg": "C:\\fakepath\\IMG_20230215_111316.jpg",
+      "productqut": "1",
+      "productprice": "1599",
+      "productoffer": "1299",
+      "productaddedate": "2023-02-20",
+      "productdescriptions": "best quality jeckets",
+      "id": 1
+    }
+  ]
+}
