@@ -1,10 +1,11 @@
-import React, { Fragment,useRef,useState } from 'react';
+import React, { Fragment, useRef, useState, useEffect } from 'react';
 import Footre from '../Footre';
 import Pagebanner from '../Pagebanner';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import swal from 'sweetalert';
+import emailjs from '@emailjs/browser';
 
 export default function Contactus() {
 
@@ -28,7 +29,7 @@ export default function Contactus() {
   };
   window.addEventListener('scroll', toggleVisible);
 
-  
+
   // CONTACT US FORM JS FOR SENDING DATA TO ADMIN
   const firstname = useRef("");
   const lastname = useRef("");
@@ -37,22 +38,35 @@ export default function Contactus() {
   const message = useRef("");
   const Navigate = useNavigate();
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_zpolbgy', 'template_5kxyapw', form.current, '2czBnqoU8QGAfahoe')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
+
   const SandData = () => {
 
     // store contact form data form of variable 
     const insert = {
-      firstname : firstname.current.value,
-      lastname : lastname.current.value,
-      email : email.current.value,
-      mobile : mobile.current.value,
-      message : message.current.value
+      firstname: firstname.current.value,
+      lastname: lastname.current.value,
+      email: email.current.value,
+      mobile: mobile.current.value,
+      message: message.current.value
     }
 
     //add data in json file via link
-    axios.post("http://localhost:2602/Contactusdata" , insert)
+    axios.post("http://localhost:2602/Contactusdata", insert)
       .then(() => {
         swal("Thank you for contact us our team contact you soon")
-      window.location='/Contactus';
+        window.location = '/Contactus';
       });
   }
 
@@ -70,32 +84,34 @@ export default function Contactus() {
           </Col>
           <Col size={10} md={6} lg={6} className='contact mx-auto mt-4 mt-sm-4 mt-md-0 mt-lg-0'>
             <h2>Say Hello. Don't Be Shy!</h2>
-            <Form className='mt-lg-4'>
+
+            <form className='mt-lg-4' ref={form} onSubmit={sendEmail}>
 
               <Form.Group controlId="exampleForm.ControlInput1" data-aos="fade-up" data-aos-duration="1000">
-                <Form.Control type="text" className="rounded-0 p-2 border-dark" ref={firstname} placeholder="First Name" minLength="2" maxLength="32" required />
+                <Form.Control type="text" className="rounded-0 p-2 border-dark" ref={firstname} placeholder="First Name" name='firstname' minLength="2" maxLength="32" required />
               </Form.Group>
-            
+
               <Form.Group className='mt-3' data-aos="fade-up" data-aos-duration="1000">
-                <Form.Control type="text" className="rounded-0 p-2 border-dark" ref={lastname} placeholder="Last Name" minLength="2" maxLength="32" required />
+                <Form.Control type="text" className="rounded-0 p-2 border-dark" ref={lastname} placeholder="Last Name" name='lastname' minLength="2" maxLength="32" required />
               </Form.Group>
-            
+
               <Form.Group className="rounded-0 mt-3" controlId="exampleForm.ControlInput1" data-aos="fade-up" data-aos-duration="1000">
-                <Form.Control type="email" className="rounded-0 p-2 border border-dark" ref={email}  placeholder="Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required />
+                <Form.Control type="email" className="rounded-0 p-2 border border-dark" name='email' ref={email} placeholder="Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required />
               </Form.Group>
-              
+
               <Form.Group className='mt-3' data-aos="fade-up" data-aos-duration="1000">
-                <Form.Control type="text" className="rounded-0 p-2 border-dark" ref={mobile} placeholder="Mobile No." pattern='[0-9]{10}' length="10" required />
+                <Form.Control type="text" className="rounded-0 p-2 border-dark" ref={mobile} name='mobile' placeholder="Mobile No." pattern='[0-9]{10}' length="10" required />
               </Form.Group>
 
               <textarea
-                className="form-control mt-3 rounded-0 border border-dark" rows="5" ref={message} placeholder='Message...' data-aos="fade-up" data-aos-duration="1000"
+                className="form-control mt-3 rounded-0 border border-dark" name='message' rows="5" ref={message} placeholder='Message...' data-aos="fade-up" data-aos-duration="1000"
               />
 
               <Button type='button' variant='outline-dark ' className='rounded-0 px-3 mt-3' onClick={SandData}>
                 <i className='fa fa-paper-plane fs-5'></i>
               </Button>
-            </Form>
+
+            </form>
 
           </Col>
         </Row>

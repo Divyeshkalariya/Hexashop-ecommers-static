@@ -26,11 +26,12 @@ function SamplePrevArrow(props) {
     );
 }
 
-export default function Kidsproductslider() {
+export default function Womenproductslider() {
 
     // slick slider 
     const settings = {
         // dots: true,
+        autoplay:true,
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -63,17 +64,14 @@ export default function Kidsproductslider() {
         ]
     }
 
-
-    // array distracturing
-    const [kidsdata, setKidsdata] = useState([])
+    const [womendata , setWomendata] = useState ([])
 
     useEffect(() => {
-        //fetch data from local broswer api json-server api using axios
-        axios.get("http://localhost:2602/Kidsliderdata")
+        axios.get("http://localhost:2602/Womensliderdata")
             .then((response) => {
-                setKidsdata(response.data)
-            });
-    }, [])
+                setWomendata(response.data)
+            })
+    },[])
 
     return (
         <Fragment>
@@ -82,11 +80,11 @@ export default function Kidsproductslider() {
                     <div className='mx-auto'>
                         <Slider {...settings} className='slider-main'>
 
-                            {kidsdata && kidsdata.map((item) => {
-                                return (
+                            {womendata && womendata.map((item) => {
+                                return(
                                     <div className='p-2 product-outer' key={item.id}>
                                         <div className='product-card '>
-                                            <img src={item.productimageurl} alt="Kids product" className='img-fluid' />
+                                            <img src={item.productimg} alt="Womens-feshion" className='img-fluid' />
                                         </div>
                                         <div className='product-icons'>
                                             <ul className='d-flex justify-content-center w-75 mx-auto'>
@@ -97,7 +95,7 @@ export default function Kidsproductslider() {
                                                     <i className="fa fa-star" aria-hidden="true"></i>
                                                 </li>
                                                 <li className='iconbox' >
-                                                    <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                    <i className="fa fa-shopping-cart" aria-hidden="true" ></i>
                                                 </li>
                                             </ul>
                                             <div className=''>
@@ -112,13 +110,14 @@ export default function Kidsproductslider() {
                                                     </span>
                                                 </div>
                                                 <div>
-                                                    <h3 className='product-price'>&#8377; {item.productprice}</h3>
+                                                    <h3 className='product-price'>&#8377; {item.productoffer}</h3>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 )
                             })}
+
                         </Slider>
                     </div>
                 </Container>

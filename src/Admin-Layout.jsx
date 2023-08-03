@@ -16,7 +16,6 @@ export default function AdminLayout() {
         <Col className='admin-layout-right'>
           <AdminHeader />
           <AdminContent/>
-          <AdminFooter />
         </Col>
       </Container>
     </Fragment>

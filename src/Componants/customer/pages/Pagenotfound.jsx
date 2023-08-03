@@ -12,7 +12,7 @@ export default function Pagenotfound() {
       <img src={error} alt="error 404 page not found" className='img-fluid w-25'/>
       <div className='py-4'>
       <Link to="/home"> 
-        <Button variant='outline-primary' className='rounder-0'>Go Back <i className='fa fa-arrow-left'></i></Button>
+        <Button variant='outline-primary' className=' rounded-0'>Go Back <i className='fa fa-arrow-left'></i></Button>
         </Link>
       </div>
     </Container>

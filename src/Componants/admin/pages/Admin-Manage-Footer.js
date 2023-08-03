@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { Container, Col, Form, Button } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Container, Col, Form, Button, Table } from 'react-bootstrap';
 import AdminHeader from '../Admin-Header';
 import AdminSidebar from '../Admin-Sidebar';
 import AdminFooter from '../Admin-Footer';
@@ -8,21 +8,13 @@ import { useNavigate } from 'react-router-dom';
 
 const AdminManageFooter = () => {
 
-    const year = useRef("")
-    const Navigate = useNavigate();
+    const [footer, setFooter] = useState('');
+    const Navigate = useNavigate('');
 
-    const UpdateFppter = () => {
-
-        const insert = {
-            year: year.current.value,
-        }
-
-        axios.post("http://localhost:2602/Footer", insert)
-            .then(() => {
-                alert("Year Update Successfully")
-                Navigate('/admin-login/admin-manage-footer')
-            });
-    }
+    useEffect(() => {
+        axios.get('http://localhost:2602/Footer')
+            .then(res => setFooter(res.data))
+    }, [])
 
     return (
         <>
@@ -38,27 +30,36 @@ const AdminManageFooter = () => {
                     <Container fluid="true" id="admin-content">
                         {/* manage footer */}
                         <Container fluid="true" id='manage-footer'>
-                            <Col>
-                                <h1 className='text-center my-3'>Manage Footer</h1>
+                            <Col className='my-3'>
+                                <h1 className='text-center pt-1'>Manage Footer</h1>
                                 <hr className='border border-2 border-info w-25 mx-auto' />
                             </Col>
 
-                            <Form className='p-5 m-5 shadow w-50 mx-auto'>
-                                <label className='mb-2'>Manage Year</label> <br />
-                                <input type='text'
-                                    placeholder='Enter Year'
-                                    minLength={3}
-                                    maxLength={4}
-                                    required
-                                    className='form-control'
-                                    ref={year}
-                                /><br />
-                                <Button type='button' onClick={UpdateFppter}>Update</Button>
-                            </Form>
+                            <h4 className='text-center mt-5'>Updaye Year</h4>
 
+                            <Table className='table table-striped table-primary w-50 mx-auto border rounded-3 mt-4 mb-5 text-center'>
+                                <thead>
+                                    <tr>
+                                        <th>To</th>
+                                        <th>From</th>
+                                        <th>Update</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {footer && footer.map((item) => {
+                                        return (
+                                            <tr key={item.id}>
+                                                <td>{item.yearfrom}</td>
+                                                <td>{item.yearto}</td>
+                                                <td><i className='fa fa-pencil text-primary' onClick={() => Navigate(`/admin-login/admin-update-footer/${item.id}`)}></i></td>
+                                            </tr>
+                                        )
+                                    })}
+                                </tbody>
+                            </Table>
 
                             {/* footer */}
-                            <AdminFooter />
+                            <AdminFooter/>
                         </Container>
                     </Container>
                 </Col>

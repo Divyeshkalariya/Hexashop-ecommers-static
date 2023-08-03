@@ -12,7 +12,6 @@ export default function AdminManageCity() {
     const [addcity, setAddCity] = useState([]);
     const Navigate = useNavigate();
   
-
     function displaycity() {
       axios.get("http://localhost:2602/AddCity")
       .then((response) => {
@@ -30,8 +29,9 @@ export default function AdminManageCity() {
     const DeletCity = (id) => {
       axios.delete(`http://localhost:2602/AddCity/${id}`)
         .then((response) => {
-          // swal('City Delet Successfully')
-
+          console.warn(response)
+          swal('City Delet Successfully')
+          displaycity();
         })
     }
 
@@ -47,12 +47,12 @@ export default function AdminManageCity() {
           <Container fluid="true" id="admin-content">
             {/* manage category start */}
             <Container fluid="true" id='manage-category'>
-              <Col>
-                <h1 className='text-center my-3'>Manage City</h1>
+              <Col className='my-3'>
+                <h1 className='text-center pt-1'>Manage City</h1>
                 <hr className='border border-2 border-info w-25 mx-auto' />
               </Col>
 
-              <table className='datatable text-center mt-4'>
+              <table className='datatable table table-striped text-center mt-4'>
                 <thead className='datatable-head'>
                   <tr>
                     <th>Id</th>
@@ -69,8 +69,9 @@ export default function AdminManageCity() {
                         <td>{item.state}</td>
                         <td>{item.city}</td>
                         <td className='fs-5'>
-                          <i className='fa fa-pencil text-primary action'></i> <span className='text-dark'> || </span>
-                          <i className='fa fa-trash text-danger action' onClick={() => DeletCity(item.id)}></i>
+                        <i className='fa fa-pencil text-primary' onClick={() => Navigate(`/admin-login/admin-update-city/${item.id}`)}></i>
+                        <span className='text-dark'> || </span>
+                        <i className='fa fa-trash text-danger action' onClick={() => DeletCity(item.id)}></i>
                         </td>
                       </tr>
                     )
@@ -84,6 +85,5 @@ export default function AdminManageCity() {
         </Col>
       </Container>
     </Fragment>
-
   )
 }

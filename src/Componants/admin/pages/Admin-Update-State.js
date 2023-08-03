@@ -1,25 +1,34 @@
-import React, { Fragment, useRef } from 'react'
+import React, { Fragment, useRef, useEffect } from 'react'
 import { Col, Container, Form, Button } from 'react-bootstrap'
 import AdminSidebar from '../Admin-Sidebar'
 import AdminHeader from '../Admin-Header'
 import AdminFooter from '../Admin-Footer'
 import axios from 'axios'
 import swal from 'sweetalert'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate , useParams } from 'react-router-dom'
 
-export default function AdminAddState() {
+export default function AdminUpdateState() {
 
     const state = useRef("");
     const Navigate = useNavigate();
+    const { id } = useParams();
 
-    const Addstate = () => {
-        const insert = {
+    useEffect(() => {
+        axios.get(`http://localhost:2602/AddState/${id}`)
+            .then((response) => {
+                state.current.value = response.data.state;
+            })
+    }, [])
+
+    const Updatestate = () => {
+        const update = {
             state: state.current.value,
         }
 
-        axios.post("http://localhost:2602/AddState", insert)
+        // update data using axios library axios.put()
+        axios.put(`http://localhost:2602/AddState/${id}`, update)
             .then(() => {
-                swal("State Added Successfully");
+                swal("State Update Successfully");
                 Navigate('/admin-login/admin-manage-state')
             })
     }
@@ -53,7 +62,7 @@ export default function AdminAddState() {
                                         />
                                     </Form.Group>
 
-                                    <Button type='button' variant='outline-primary ' className='px-3 mt-3 w-25' onClick={Addstate} >Add State</Button>
+                                    <Button type='button' variant='outline-success ' className='px-3 mt-3 w-25' onClick={Updatestate} >Update State</Button>
                                 </Form>
 
                             </Container>

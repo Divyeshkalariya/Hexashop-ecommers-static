@@ -55,8 +55,8 @@ export default function AdminAddSubCategory() {
                     <Container fluid="true" id="admin-content">
                         {/* add category */}
                         <Container fluid="true" id='add-category'>
-                            <Col>
-                                <h1 className='text-center pt-1'>Add sub-category</h1>
+                            <Col className='my-3'>
+                                <h1 className='text-center pt-1'>Add Sub-Category</h1>
                                 <hr className='border border-2 border-info w-25 mx-auto' />
                             </Col>
 
@@ -67,12 +67,12 @@ export default function AdminAddSubCategory() {
                                         <select
                                             type="text"
                                             className='form-control mt-1'
-                                            ref={categoryname} 
+                                            ref={categoryname}
                                         >
                                             <option>- Select Category -</option>
                                             {addcategory && addcategory.map((row) => {
                                                 return (
-                                                    <option   value={row.categoryname}>{row.categoryname}</option>
+                                                    <option value={row.categoryname}>{row.categoryname}</option>
                                                 )
                                             })}
                                         </select>

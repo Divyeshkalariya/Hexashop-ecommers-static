@@ -20,8 +20,8 @@ export default function AdminManageOrders() {
           <Container fluid="true" id='admin-content'>
             {/* manage order */}
             <Container fluid="true"  id='manage-oeder'>
-              <Col>
-                <h1 className='text-center my-3'>Manage Orders</h1>
+              <Col className='my-3'>
+                <h1 className='text-center pt-1'>Manage Orders</h1>
                 <hr className='border border-2 border-info w-25 mx-auto' />
               </Col>
             </Container>

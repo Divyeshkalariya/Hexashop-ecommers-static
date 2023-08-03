@@ -47,12 +47,12 @@ export default function AdminManageCategory() {
           <Container fluid="true" id="admin-content">
             {/* manage category start */}
             <Container fluid="true" id='manage-category'>
-              <Col>
-                <h1 className='text-center my-3'>Manage category</h1>
+            <Col className='my-3'>
+                <h1 className='text-center pt-1'>Manage Category</h1>
                 <hr className='border border-2 border-info w-25 mx-auto' />
               </Col>
 
-              <table className='datatable text-center mt-4'>
+              <table className='datatable table table-striped text-center mt-4'>
                 <thead className='datatable-head'>
                   <tr>
                     <th>No.</th>
@@ -71,7 +71,7 @@ export default function AdminManageCategory() {
                         <td>{item.categorydate}</td>
                         <td>{item.categorydescraption}</td>
                         <td className='fs-5'>
-                          <i className='fa fa-pencil text-primary action' onClick={() => Navigate(`/admin-login/admin-update-category/${item.id}`)}></i>
+                          <i className='fa fa-pencil text-primary' onClick={() => Navigate(`/admin-login/admin-update-category/${item.id}`)}></i>
                           <span className='text-dark'> || </span>
                           <i className='fa fa-trash text-danger action' onClick={() => DeletCategory(item.id)}></i>
                         </td>

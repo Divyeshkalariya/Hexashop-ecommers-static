@@ -35,14 +35,6 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
 
-  // FATCH CATEGORY
-  const [category , setCategory] = useState([])
-  
-  useEffect(() => {
-    axios.get("http://localhost:2602/AddCategories")
-      .then(res => setCategory(res.data))
-  })
-
   // SCROLL TOP ARROW
   const [visible, setVisible] = useState(false)
   const toggleVisible = () => {
@@ -62,10 +54,17 @@ export default function Home() {
   };
   window.addEventListener('scroll', toggleVisible);
 
+  // FATCH CATEGORY
+  const [category , setCategory] = useState([])
+  useEffect(() => {
+    axios.get("http://localhost:2602/AddCategories")
+      .then(res => setCategory(res.data))
+  })
+
   return (
     <Fragment>
       {/* home section start */}
-      <Container fluid="true" className='py-2 pb-5' id='home'>
+      <Container fluid="true" className='py-2 pb-0 pb-sm-2 pb-md-2 pb-lg-3' id='home'>
         <Row className='p-4 g-3'>
           <Col sm={12} md={6} lg={6} className='home-left' data-aos="zoom-in" data-aos-duration="500">
             <div className='home-left-inner'>
@@ -76,7 +75,7 @@ export default function Home() {
               </div>
             </div>
             <div className='home-left-image'>
-              <img src={shopping} alt="shopping" className='img-fluid' />
+              <img src={shopping} alt="shopping" className='img-fluid'/>
             </div>
           </Col>
           <Col size={12} sm={12} md={6} lg={6} className='home-right-main'>
@@ -135,21 +134,21 @@ export default function Home() {
       </Container>
 
       {/* slider section start */}
-      <Container fluid="true" className='mt-5'>
+      <Container fluid="true" className='mt-3 mt-md-4 mt-lg-5'>
         <HomeSlider />
       </Container>
 
       {/* category section start */}
       {/* <Container fluid="true" id='category'>
-        <Row className='container mx-auto p-5'>
-          <Col className='p-5 shadow col-3 category-left'>
+        <Row className='p-5'>
+          <Col className=' col-3 category-left m-0'>
             <h2>Categories</h2>
             <ul className='category-list'>
               { category.map((item) => {
                 return(
                   <li key={item.id}>
                     <i className='fa fa-arrow-right'></i>
-                    <Link> {item.categoryname}</Link>
+                    <Link>{item.categoryname}</Link>
                   </li>
                 )
               })}

@@ -101,8 +101,8 @@ export default function AdminManageContact() {
           <Container fluid="true" id="admin-content">
             {/* manage contact */}
             <Container fluid="true" id='manage-contact'>
-              <Col>
-                <h1 className='text-center my-3'>Manage Contact</h1>
+              <Col className='my-3'>
+                <h1 className='text-center pt-1'>Manage Contact</h1>
                 <hr className='border border-2 border-info w-25 mx-auto' />
               </Col>
 

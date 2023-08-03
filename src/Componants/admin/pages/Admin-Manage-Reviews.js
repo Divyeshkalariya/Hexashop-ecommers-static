@@ -19,8 +19,8 @@ export default function AdminManageReviews() {
           <Container fluid="true" id='admin-content'>
             {/* manage review */}
             <Container fluid="true" className='mb-5' id='manage-review'>
-              <Col>
-                <h1 className='text-center my-3'>Manage Reviews</h1>
+              <Col className='my-3'>
+                <h1 className='text-center pt-1'>Manage Review</h1>
                 <hr className='border border-2 border-info w-25 mx-auto' />
               </Col>
               <Container className='mt-4'>

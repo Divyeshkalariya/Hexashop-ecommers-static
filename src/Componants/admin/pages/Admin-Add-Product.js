@@ -77,23 +77,23 @@ export default function AdminAddProduct() {
           <Container fluid="true" id="admin-content">
             {/* Add Product */}
             <Container fluid="true" className='mb-5' id='add-product'>
-              <Col>
-                <h1 className='text-center my-3'>Add Product</h1>
+            <Col className='my-3'>
+                <h1 className='text-center pt-1'>Add Product</h1>
                 <hr className='border border-2 border-info w-25 mx-auto' />
               </Col>
-              <Container className='w-75 mb-4 mt-5'>
 
+              <Container className='w-75 mb-4'>
                 <Form>
-
                   <div className='mt-3'>
                     <label>Select Category </label>
                     <select
                       className='form-control mt-1'
+                      ref={addcategoriename}
                     >
                       <option>- Select Category -</option>
                       {allcategory && allcategory.map((row) => {
                         return (
-                          <option ref={addcategoriename} value={row.categoryname}>{row.categoryname}</option>
+                          <option value={row.categoryname}>{row.categoryname}</option>
                         )
                       })}
                     </select>
@@ -103,11 +103,12 @@ export default function AdminAddProduct() {
                     <label>Select Sub-Category</label>
                     <select
                       className='form-control mt-1'
+                      ref={addsubcategoriename}
                     >
                       <option>- Select Sub-Category -</option>
                       {addSubCategory && addSubCategory.map((row) => {
                         return (
-                          <option ref={addsubcategoriename} value={row.subcategoryname}>{row.subcategoryname}</option>
+                          <option value={row.subcategoryname}>{row.subcategoryname}</option>
                         )
                       })}
                     </select>

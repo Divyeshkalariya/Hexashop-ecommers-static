@@ -10,7 +10,17 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 export default function AdminUpdateSubCategory() {
 
-    // store data in variable
+    // FATCH CATEGORY FROM API
+    const [addcategory, setAllcategory] = useState([])
+
+    useEffect(() => {
+        axios.get("http://localhost:2602/AddCategories")
+            .then((response) => {
+                setAllcategory(response.data)
+            });
+    }, []);
+
+    // UPDATA DATA IN API
     const categoryname = useRef("");
     const subcategoryname = useRef("");
     const subcategorydate = useRef("");
@@ -35,23 +45,13 @@ export default function AdminUpdateSubCategory() {
             subcategorydate: subcategorydate.current.value,
             subcategorydescraption: subcategorydescraption.current.value,
         }
-
-        axios.post(`http://localhost:2602/AddSubCategories/${id}`, update)
+    
+        axios.put(`http://localhost:2602/AddSubCategories/${id}`, update)
             .then(() => {
                 swal("Sub-Category Update Successfully")
             })
         Navigate("/admin-login/admin-manage-subcategory");
     }
-
-    // FATCH CATEGORY FROM API
-    const [addcategory, setAllcategory] = useState([])
-
-    useEffect(() => {
-        axios.get("http://localhost:2602/AddCategories")
-            .then((response) => {
-                setAllcategory(response.data)
-            });
-    }, []);
 
     return (
         <>
@@ -79,11 +79,12 @@ export default function AdminUpdateSubCategory() {
                                         <select
                                             type="text"
                                             className='form-control mt-1'
+                                            ref={categoryname}
                                         >
                                             <option>- Select Category -</option>
                                             {addcategory && addcategory.map((row) => {
                                                 return (
-                                                    <option ref={categoryname} value={row.categoryname} key={row.id}>{row.categoryname}</option>
+                                                    <option value={row.categoryname} key={row.id}>{row.categoryname}</option>
                                                 )
                                             })}
                                         </select>
@@ -117,7 +118,7 @@ export default function AdminUpdateSubCategory() {
                                         ></textarea>
                                     </div>
 
-                                    <Button type="button" variant='outline-primary' className='mt-4 w-25 ms-2' onClick={UpdateSubcategory}>Update Subcategory</Button>
+                                    <Button type="button" variant='outline-success' className='mt-4 w-25 ms-2' onClick={UpdateSubcategory}>Update Subcategory</Button>
                                 </Row>
                             </Form>
                         </Container>

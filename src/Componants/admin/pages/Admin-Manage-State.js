@@ -11,7 +11,6 @@ export default function AdminManageState() {
 
   const [addstate, setAddstate] = useState([]);
   const Navigate = useNavigate('');
-  // const{id} = useParams();
 
   function displaystate(){
     axios.get("http://localhost:2602/AddState")
@@ -47,12 +46,12 @@ export default function AdminManageState() {
           <Container fluid="true" id="admin-content">
             {/* manage category start */}
             <Container fluid="true" id='manage-category'>
-              <Col>
-                <h1 className='text-center my-3'>Manage State</h1>
+              <Col className='my-3'>
+                <h1 className='text-center pt-1'>Manage State</h1>
                 <hr className='border border-2 border-info w-25 mx-auto' />
               </Col>
 
-              <table className='datatable text-center mt-4'>
+              <table className='datatable table table-striped text-center mt-4'>
                 <thead className='datatable-head'>
                   <tr>
                     <th>Id</th>
@@ -67,7 +66,7 @@ export default function AdminManageState() {
                         <td>{item.id}</td>
                         <td>{item.state}</td>
                         <td className='fs-5'>
-                          <i className='fa fa-pencil text-primary action'></i> <span className='text-dark'> || </span>
+                          <i className='fa fa-pencil text-primary' onClick={() => Navigate(`/admin-login/admin-update-state/${item.id}`)}></i> <span className='text-dark'> || </span>
                           <i className='fa fa-trash text-danger action' onClick={() => DeletState(item.id)}></i>
                         </td>
                       </tr>

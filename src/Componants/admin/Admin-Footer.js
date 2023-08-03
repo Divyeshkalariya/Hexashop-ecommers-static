@@ -16,15 +16,13 @@ export default function AdminFooter() {
 
   return (
     <Fragment>
-
       {footer.map((item) => {
         return(
         <Container fluid="true" id='admin-footer' className='admin-Footer p-3 text-center' key={item.id}>
-          <h6 className='p-0 m-0'>Copyright &copy; 2021 - {item.year} All rights are reserved </h6>
+          <h6 className='p-0 m-0'>Copyright &copy; {item.yearfrom} - {item.yearto} All rights are reserved </h6>
         </Container>
         )
       })}
-
     </Fragment>
   )
 }

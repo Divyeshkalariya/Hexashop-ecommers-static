@@ -26,12 +26,12 @@ function SamplePrevArrow(props) {
     );
 }
 
-export default function Menproductslider() {
+export default function Kidsproductslider() {
 
     // slick slider 
     const settings = {
         // dots: true,
-        // autoplay:true,
+        autoplay:true,
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -64,13 +64,14 @@ export default function Menproductslider() {
         ]
     }
 
-    const [mensdata, setMensdata] = useState([])
 
+    // array distracturing
+    const [kidsdata, setKidsdata] = useState([])
     useEffect(() => {
-        //fetch data from local browser api json-server api using axios
-        axios.get("http://localhost:2602/Mensliderdata")
+        //fetch data from local broswer api json-server api using axios
+        axios.get("http://localhost:2602/Kidsliderdata")
             .then((response) => {
-                setMensdata(response.data)
+                setKidsdata(response.data)
             });
     }, [])
 
@@ -80,11 +81,12 @@ export default function Menproductslider() {
                 <Container>
                     <div className='mx-auto'>
                         <Slider {...settings} className='slider-main'>
-                            {mensdata && mensdata.map((item) => {
+
+                            {kidsdata && kidsdata.map((item) => {
                                 return (
                                     <div className='p-2 product-outer' key={item.id}>
                                         <div className='product-card '>
-                                            <img src={item.productimageurl} alt="mens-cloths" className='img-fluid' />
+                                            <img src={item.productimg} alt="Kids product" className='img-fluid' />
                                         </div>
                                         <div className='product-icons'>
                                             <ul className='d-flex justify-content-center w-75 mx-auto'>
@@ -110,7 +112,7 @@ export default function Menproductslider() {
                                                     </span>
                                                 </div>
                                                 <div>
-                                                    <h3 className='product-price'> &#8377; {item.productprice}</h3>
+                                                    <h3 className='product-price'>&#8377; {item.productoffer}</h3>
                                                 </div>
                                             </div>
                                         </div>

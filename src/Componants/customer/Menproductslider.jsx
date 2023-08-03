@@ -4,38 +4,39 @@ import Slider from "react-slick";
 import axios from 'axios';
 
 
-function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block" }}
-            onClick={onClick}
-        />
-    );
-}
+// function SampleNextArrow(props) {
+//     const { className, style, onClick } = props;
+//     return (
+//         <div
+//             className={className}
+//             style={{ ...style, display: "block" }}
+//             onClick={onClick}
+//         />
+//     );
+// }
 
-function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block" }}
-            onClick={onClick}
-        />
-    );
-}
+// function SamplePrevArrow(props) {
+//     const { className, style, onClick } = props;
+//     return (
+//         <div
+//             className={className}
+//             style={{ ...style, display: "block" }}
+//             onClick={onClick}
+//         />
+//     );
+// }
 
-export default function Womenproductslider() {
+export default function Menproductslider() {
 
-    // slick slider 
+    // SLICK SLIDER 
     const settings = {
         // dots: true,
+        autoplay:true,
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
+        // nextArrow: <SampleNextArrow/>,
+        // prevArrow: <SamplePrevArrow/>,
         responsive: [
             {
                 breakpoint: 1024,
@@ -63,14 +64,15 @@ export default function Womenproductslider() {
         ]
     }
 
-    const [womendata , setWomendata] = useState ([])
+    const [mensdata, setMensdata] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:2602/Womensliderdata")
+        //fetch data from local browser api json-server api using axios
+        axios.get("http://localhost:2602/Mensliderdata")
             .then((response) => {
-                setWomendata(response.data)
-            })
-    },[])
+                setMensdata(response.data)
+            });
+    }, [])
 
     return (
         <Fragment>
@@ -78,12 +80,11 @@ export default function Womenproductslider() {
                 <Container>
                     <div className='mx-auto'>
                         <Slider {...settings} className='slider-main'>
-
-                            {womendata && womendata.map((item) => {
-                                return(
+                            {mensdata && mensdata.map((item) => {
+                                return (
                                     <div className='p-2 product-outer' key={item.id}>
                                         <div className='product-card '>
-                                            <img src={item.productimageurl} alt="Womens-feshion" className='img-fluid' />
+                                            <img src={item.productimg} alt="mens-cloths" className='img-fluid' />
                                         </div>
                                         <div className='product-icons'>
                                             <ul className='d-flex justify-content-center w-75 mx-auto'>
@@ -109,14 +110,13 @@ export default function Womenproductslider() {
                                                     </span>
                                                 </div>
                                                 <div>
-                                                    <h3 className='product-price'>&#8377; {item.productprice}</h3>
+                                                    <h3 className='product-price'> &#8377; {item.productoffer}</h3>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 )
                             })}
-
                         </Slider>
                     </div>
                 </Container>

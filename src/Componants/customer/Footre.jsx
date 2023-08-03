@@ -7,19 +7,23 @@ import axios from 'axios';
 
 export default function Footre() {
 
+  // FOR FOOTER YEAR
   const [footer, setFooter] = useState([])
-
   useEffect(() => {
     axios.get(' http://localhost:2602/Footer')
       .then(res => setFooter(res.data))
   }, [])
+  
+  const scrolltop=()=>{
+    window.screenTop(0,0)
+  }
 
   return (
     <Fragment>
       {footer && footer.map((item) => {
         return (
 
-          <Container fluid={true} id='footer' className='py-sm-5 py-md-5 py-lg-5' key={item.id}>
+          <Container fluid={true} id='footer' className='pt-sm-5 pb-sm-2 pt-md-5 pt-md-2 pt-lg-5 pt-lg-2' key={item.id}>
             <Container className='mx-auto'>
               <Row>
                 <Col size={12} md={6} lg={3}>
@@ -39,25 +43,25 @@ export default function Footre() {
                 <Col size={12} md={6} lg={3}>
                   <h4 className='text-white'>Help & Information</h4>
                   <p className='mt-3'>
-                    <Link to="/help" className='text-white text-decoration-none'>Help</Link>
+                    <Link to="/help" className='text-white text-decoration-none' onClick={scrolltop}>Help</Link>
                   </p>
                   <p className='mt-3'>
-                    <Link to="/Faqs" className='text-white text-decoration-none'>FAQ's</Link>
+                    <Link to="/Faqs" className='text-white text-decoration-none' onClick={scrolltop}>FAQ's</Link>
                   </p>
                   <p className='mt-3'>
-                    <Link to="/Tracking" className='text-white text-decoration-none'>Tracking ID</Link>
+                    <Link to="/Tracking" className='text-white text-decoration-none' onClick={scrolltop}>Tracking ID</Link>
                   </p>
                 </Col>
                 <Col size={12} md={6} lg={3}>
                   <h4 className='text-white'>Useful Links</h4>
                   <p className='mt-3'>
-                    <Link to="/home#home" className='text-white text-decoration-none'>Home</Link>
+                    <Link to="/home" className='text-white text-decoration-none' onClick={scrolltop}>Home</Link>
                   </p>
                   <p className='mt-3'>
-                    <Link to="/Aboutus" className='text-white text-decoration-none'>About</Link>
+                    <Link to="/Aboutus" className='text-white text-decoration-none' onClick={scrolltop}>About</Link>
                   </p>
                   <p className='mt-3'>
-                    <Link to="/contactus" className='text-white text-decoration-none'>Contact us</Link>
+                    <Link to="/contactus" className='text-white text-decoration-none' onClick={scrolltop}>Contact us</Link>
                   </p>
                 </Col>
                 <Col size={12} md={6} lg={3}>
@@ -77,15 +81,15 @@ export default function Footre() {
                 <hr className='hrline bg-white rounded-5' />
               </Col>
 
-
               <Col size={12} className='text-center'>
-                <p className='text-white' >Copyright &#169; 2021 - {item.year} Hexashop Co., Ltd. All Rights Reserved. </p>
+                <p className='text-white mb-1' >Copyright &#169; {item.yearfrom} - {item.yearto} Hexashop Co. Ltd. All Rights Reserved. </p>
                 <div className='icons'>
                   <span><Link to="/" className='fa fa-facebook-f text-decoration-none p-2 fs-4'></Link></span>
                   <span><Link to="/" className='fa fa-twitter text-decoration-none p-2 fs-4'></Link></span>
                   <span><Link to="/" className='fa fa-linkedin text-decoration-none p-2 fs-4'></Link></span>
                   <span><Link to="/" className='fa fa-behance text-decoration-none p-2 fs-4'></Link></span>
                 </div>
+                <p className='text-white mt-1'>Design By : <b className='text-warning'>Divyesh Kalariya</b></p>
               </Col>
             </Container>
           </Container>

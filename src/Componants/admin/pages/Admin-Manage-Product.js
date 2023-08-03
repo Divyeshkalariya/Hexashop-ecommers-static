@@ -7,14 +7,29 @@ import axios from 'axios';
 
 export default function AdminManageProduct() {
 
+  // DISPLAY DATA FROM API
   const [ product, setProduct ] = useState([])
 
+  const displayproduct = () => {
+    axios.get("http://localhost:2602/AddProducts")
+    .then((response) => {
+      setProduct(response.data)
+    });
+  }
+
   useEffect(() => {
-      axios.get("http://localhost:2602/AddProducts")
-          .then((response) => {
-            setProduct(response.data)
-          });
+    displayproduct();
   }, []);
+
+
+  //DELET DATA FROM API
+  const Deletproduct = (id) => {
+    axios.delete(`http://localhost:2602/AddProducts/${id}`)
+      .then((res) => {
+        console.warn(res)
+        displayproduct();
+      })
+  }
 
   return (
     <Fragment>
@@ -30,12 +45,11 @@ export default function AdminManageProduct() {
           <Container fluid="true" id='admin-content'>
             {/* manage products */}
             <Container fluid="true" id='manage-product'>
-              <Col>
-                <h1 className='text-center my-3'>Manage Products</h1>
+            <Col className='my-3'>
+                <h1 className='text-center pt-1'>Manage Product</h1>
                 <hr className='border border-2 border-info w-25 mx-auto' />
               </Col>
-              <Container className='mb-4'>
-                <Table className='datatable text-center'> 
+                <Table className='datatable table table-striped text-center my-5'> 
                   <thead className='datatable-head'>
                     <tr align="center">
                       <th>CATEGORY</th>
@@ -46,7 +60,7 @@ export default function AdminManageProduct() {
                       <th>PRICE</th>
                       <th>OFFER PRICE</th>
                       <th>ADD DATE</th>
-                      <th>DESCRIPTION</th>
+                      {/* <th>DESCRIPTION</th> */}
                       <th>ACTION</th>
                     </tr>
                   </thead>
@@ -57,19 +71,22 @@ export default function AdminManageProduct() {
                           <td>{item.addcategoriename}</td>
                           <td>{item.addsubcategoriename}</td>
                           <td>{item.productname}</td>
-                          <td>{item.productimg}</td>
+                          <td> <img src={item.productimg} alt='slide-images' style={{width:"70px"}} className='img-fluid'/></td>
                           <td>{item.productqut}</td>
                           <td>{item.productprice}</td>
                           <td>{item.productoffer}</td>
                           <td>{item.productaddedate}</td>
-                          <td>{item.productdescriptions}</td>
+                          {/* <td style={{width:"30%"}}>{item.productdescriptions}</td> */}
+                          <td><i className='fa fa-pencil text-primary'></i>
+                          <br/>
+                          <i className='fa fa-trash text-danger' onClick={() => Deletproduct(item.id)}></i>
+                          </td>
                         </tr>
                       )
                     })}
                   </tbody>
 
                 </Table>
-              </Container>
             </Container>
 
             {/* footer */}

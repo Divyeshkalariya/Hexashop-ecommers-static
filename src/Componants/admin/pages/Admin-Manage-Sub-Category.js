@@ -46,12 +46,12 @@ export default function AdminManageSubCategory() {
           <Container fluid="true" id="admin-content">
             {/* manage category start */}
             <Container fluid="true" id='manage-subcategory'>
-              <Col>
-                <h1 className='text-center my-3'>Manage Sub-category</h1>
-                <hr className='border border-2 border-info w-25 mx-auto'/>
+            <Col className='my-3'>
+                <h1 className='text-center pt-1'>Manage Sub-Category</h1>
+                <hr className='border border-2 border-info w-25 mx-auto' />
               </Col>
 
-              <table className='datatable text-center mt-4'>
+              <table className='datatable table table-striped text-center mt-4'>
                 <thead className='datatable-head'>
                   <tr>
                     <th>No.</th>

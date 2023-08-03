@@ -38,7 +38,6 @@ export default function Aboutus() {
   };
   window.addEventListener('scroll', toggleVisible);
 
-
   // OUR TEAM DATA
   const [ourteam, setOurteam] = useState([])
   useEffect(() => {
@@ -49,34 +48,20 @@ export default function Aboutus() {
   }, [])
 
 
-  // OUR SERVICE DATA
-  const [ourservice, setOurservice] = useState([])
-  useEffect(() => {
-    axios.get("http://localhost:2602/Ourservicecarddata")
-      .then((response) => {
-        setOurservice(response.data)
-      })
-  }, [])
-
-
   // OUR BRAND SLIDER 
   var settings = {
 
     className: "center",
-      centerMode: true,
-      infinite: true,
-      centerPadding: "60px",
-      slidesToShow: 3,
-      speed: 500,
-
-    dots: true,
-    // infinite: true,
-    lazyLoad: true,
-    autoplay:true,
-    // speed: 500,
-    // slidesToShow: 4,
-    // slidesToScroll: 4,
-    // initialSlide: 0,
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    pauseOnHover: false,
+    slidesToShow: 3,
+    autoplay: true,
+    lazyLoad : true,
+    autoplaySpeed: 3000,
+    speed : 1000,
+    dots : true,
     responsive: [
       {
         breakpoint: 1024,
@@ -197,16 +182,26 @@ export default function Aboutus() {
             <p> "Great acts are made up of small deeds."</p>
           </Col>
           <Row className='mt-lg-5 servicecard-row pb-4'>
-
-            {ourservice && ourservice.map((item) => {
-              return (
-                <Col md={5} lg={4} className='col-7 mt-4 mt-lg-0 mx-auto text-center servicecard-head shadow  p-4' data-aos="fade-up" data-aos-duration="1000" key={item.id}>
-                  <h2 className='mt-lg-3'>{item.heading}</h2>
-                  <p className='px-lg-3' >{item.details}</p>
-                  <img src={item.picture} alt="service-image-1" className="img-fluid servicecard-image" />
-                </Col>
-              )
-            })}
+            <Col md={5} lg={5} className='col-7 mt-4 mt-lg-0 mx-auto text-center servicecard-head shadow  p-4' data-aos="fade-up" data-aos-duration="1000">
+              <i className='fa fa-shopping-basket fs-1'></i>
+              <h2 className='mt-lg-3'>Free Shipping</h2>
+              <p className='px-lg-3' >Save money online with free shipping - Browse through our free coupons, coupen codes, and cashback offers from popular brands and leading stores in India.</p>
+            </Col>
+            <Col md={5} lg={5} className='col-7 mt-4 mt-lg-0 mx-auto text-center servicecard-head shadow  p-4' data-aos="fade-up" data-aos-duration="1000">
+              <i className='fa fa-credit-card fs-1'></i>
+              <h2 className='mt-lg-3'>Secure Payments</h2>
+              <p className='px-lg-3' >try to pay by Credit-card or Debit-card via a secure payment method, and talk to the owner over the phone.</p>
+            </Col>
+            <Col md={5} lg={5} className='col-7 mt-4 mt-lg-5 mx-auto text-center servicecard-head shadow  p-4' data-aos="fade-up" data-aos-duration="1000">
+            <sub><i className='fa fa-truck fs-3'></i></sub><i className='fa fa-map-pin fs-1'></i>
+              <h2 className='mt-lg-3'>Tracking</h2>
+              <p className='px-lg-3' >We allow the customer to know; whether the item has left the warehouse, where it is within the delivery process, and the estimated delivery date and time.</p>
+            </Col>
+            <Col md={5} lg={5} className='col-7 mt-4 mt-lg-5 mx-auto text-center servicecard-head shadow  p-4' data-aos="fade-up" data-aos-duration="1000">
+              <i className='fa fa-cogs fs-1'></i>
+              <h2 className='mt-lg-3'>24 x 7 Support</h2>
+              <p className='px-lg-3' >These system enable customer service ans support terms to contact technicians and send them to service a product a when needed.</p>
+            </Col>
           </Row>
         </Container>
       </Container>
@@ -225,7 +220,7 @@ export default function Aboutus() {
                 {ourbrand && ourbrand.map((item) => {
                   return (
                     <div key={item.id} className='slidebox' data-aos="zoom-in-down" data-aos-duration="1000">
-                      <img src={item.image} alt={item.brandname} className='img-fluid h-100 mx-auto'/>
+                      <img src={item.image} alt={item.brandname} className='img-fluid h-100 mx-auto' />
                     </div>
                   )
                 })}

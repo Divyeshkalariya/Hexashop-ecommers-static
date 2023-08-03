@@ -43,8 +43,8 @@ export default function AdminAddCategory() {
           <Container fluid="true" id="admin-content">
             {/* add category */}
             <Container fluid="true" id='admin-add-category'>
-              <Col>
-                <h1 className='text-center pt-1'>Add category</h1>
+            <Col className='my-3'>
+                <h1 className='text-center pt-1'>Add Category</h1>
                 <hr className='border border-2 border-info w-25 mx-auto' />
               </Col>
 

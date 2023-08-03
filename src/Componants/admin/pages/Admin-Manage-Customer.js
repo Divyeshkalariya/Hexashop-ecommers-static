@@ -100,8 +100,8 @@ export default function AdminManageCustomer() {
           <Container fluid="true" id="admin-content">
             {/* manage contact */}
             <Container fluid="true" id='manage-contact'>
-              <Col>
-                <h1 className='text-center my-3'>Manage Customer</h1>
+              <Col className='my-3'>
+                <h1 className='text-center pt-1'>Manage Customer</h1>
                 <hr className='border border-2 border-info w-25 mx-auto' />
               </Col>
 
@@ -110,7 +110,7 @@ export default function AdminManageCustomer() {
               <DataTable columns={columns} data={filtercustomer}
                 pagination
                 fixedHeader
-                fixedHeaderScrollHeight='350px'
+                fixedHeaderScrollHeight='340px'
                 selectableRows
                 selectableRowsHighlight
                 highlightOnHover
