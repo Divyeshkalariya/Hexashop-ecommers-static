@@ -6,33 +6,6 @@ import Swal from 'sweetalert2'
 
 export default function Checkout() {
 
-    // FATCH STATE CITY
-    const [state, setState] = useState([])
-    useEffect(() => {
-        axios.get('http://localhost:2602/AddState')
-            .then((response) => {
-                setState(response.data)
-            })
-    }, [])
-
-    // FATCH STATE CITY
-    const [city, setCity] = useState([])
-    useEffect(() => {
-        axios.get('http://localhost:2602/Addcity')
-            .then((response) => {
-                setCity(response.data)
-            })
-    }, [])
-
-    // FATCH CART PRODUCT NAME
-    const [cart, setCart] = useState([])
-    useEffect(() => {
-        axios.get('http://localhost:2602/Cart')
-            .then((response) => {
-                setCart(response.data)
-            })
-    }, [])
-
     // ORDERPLACE
     const OrderPlace=()=>{
         Swal.fire({
@@ -80,22 +53,20 @@ export default function Checkout() {
                                     <label className='mt-2'>State</label>
                                     <select title='City' className="form-control rounded-0 border border-black">
                                         <option>- Select State -</option>
-                                        {state && state.map((place) => {
-                                            return (
-                                                <option key={place.id}>{place.state}</option>
-                                            )
-                                        })}
+                                            <option >Gujarat</option>
+                                            <option >Rajesthan</option>
+                                            <option >Punjab</option>
                                     </select>
                                 </div>
                                 <div className="col-md-6 form-group">
                                     <label className='mt-2'>City</label>
                                     <select title='City' className="form-control rounded-0 border border-black">
                                         <option>- Select City -</option>
-                                        {city && city.map((place) => {
-                                            return (
-                                                <option key={place.id}>{place.city}</option>
-                                            )
-                                        })}
+                                                <option>Rajkot</option>
+                                                <option>Junagadh</option>
+                                                <option>Nathdwar</option>
+                                                <option>Delhi</option>
+                                                <option>Rajkot</option>
                                     </select>
                                 </div>
 
@@ -115,19 +86,15 @@ export default function Checkout() {
                             </div>
                             <div className="card-body">
 
-                                {cart.map((product) => {
-                                    return (
-                                        <div className="d-flex justify-content-between" key={product.id}>
-                                            <p>{product.productname}</p>
-                                            <p>{product.productoffer}</p>
+                                        <div className="d-flex justify-content-between">
+                                            <p></p>
+                                            <p></p>
                                         </div>
-                                    )
-                                })}
                                 <hr className="mt-0" />
                                 <div className="d-flex justify-content-between mb-3 pt-1">
                                     <h6 className="font-weight-medium">Subtotal</h6>
                                     <input
-                                        value={cart.map(item => item.productoffer * item.productqut).reduce((total, value) => (parseInt(total) + parseInt(value)), 0)}
+                                        value="9,295"
                                         readOnly
                                         className='rounded-0 border-0 text-end'
                                         id='subtotle'
@@ -148,7 +115,7 @@ export default function Checkout() {
                             <div className="card-footer border border-black border-bottom-0 border-end-0 border-start-0 bg-transparent rounded-0">
                                 <div className="d-flex justify-content-between mt-2">
                                     <h5 className="font-weight-bold">Total</h5>
-                                    <h5 className="font-weight-bold">Rs.{cart.map(item => item.productoffer * item.productqut).reduce((total, value) => (parseInt(total) + parseInt(value)), 0)}</h5>
+                                    <h5 className="font-weight-bold">Rs. 9,295</h5>
                                 </div>
                             </div>
                         </div>

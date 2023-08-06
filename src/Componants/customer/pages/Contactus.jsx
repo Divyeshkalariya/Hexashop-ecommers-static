@@ -22,10 +22,7 @@ export default function Contactus() {
     }
   };
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo(0,0);
   };
   window.addEventListener('scroll', toggleVisible);
 

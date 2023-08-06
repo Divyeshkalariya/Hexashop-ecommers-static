@@ -1,25 +1,22 @@
-import React, { Fragment,useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import Footre from '../Footre'
 import { Container, Col, Row } from 'react-bootstrap'
 
 export default function Help() {
 
     const [visible, setVisible] = useState(false)
-        
+
     const toggleVisible = () => {
-      const scrolled = document.documentElement.scrollTop;
-      if (scrolled > 300){
-        setVisible(true)
-      } 
-      else if (scrolled <= 300){
-        setVisible(false)
-      }
+        const scrolled = document.documentElement.scrollTop;
+        if (scrolled > 300) {
+            setVisible(true)
+        }
+        else if (scrolled <= 300) {
+            setVisible(false)
+        }
     };
-    const scrollToTop = () =>{
-      window.scrollTo({
-        top: 0, 
-        behavior: 'smooth'
-      });
+    const scrollToTop = () => {
+        window.scrollTo(0,0);
     };
     window.addEventListener('scroll', toggleVisible);
 

@@ -27,7 +27,7 @@
   ],
   "Mensliderdata": [
     {
-      "id": 0,
+      "id": 1,
       "productname": "Classic Spring",
       "productaddedate": "2023-07-25",
       "productoffer": " 3499",
@@ -36,7 +36,7 @@
       "productdiscraption": "best cloths for men"
     },
     {
-      "id": 1,
+      "id": 2,
       "productname": "Classic Stome",
       "productaddedate": "2023-07-25",
       "productoffer": " 1900",
@@ -45,7 +45,7 @@
       "productdiscraption": "best cloths for men"
     },
     {
-      "id": 2,
+      "id": 3,
       "productname": "Air Force 1 X",
       "productaddedate": "2023-07-25",
       "productoffer": " 2499",
@@ -54,7 +54,7 @@
       "productdiscraption": "best cloths for men"
     },
     {
-      "id": 3,
+      "id": 4,
       "productname": "Love Nani ' 20",
       "productaddedate": "2023-07-25",
       "productoffer": " 999",
@@ -63,7 +63,7 @@
       "productdiscraption": "best cloths for men"
     },
     {
-      "id": 4,
+      "id": 5,
       "productname": "Lost Stack",
       "productaddedate": "2023-07-25",
       "productoffer": " 1299",
@@ -72,7 +72,7 @@
       "productdiscraption": "best cloths for men"
     },
     {
-      "id": 5,
+      "id": 6,
       "productname": "Classy Style",
       "productaddedate": "2023-07-25",
       "productoffer": " 1799",
@@ -1416,7 +1416,7 @@
       "id": 55
     },
     {
-      "addcategoriename": "Kids",
+      "addcategoriename": "Accessories",
       "productname": "Women Watch",
       "productimg": "https://m.media-amazon.com/images/I/611I0f+I+MS._UX466_.jpg",
       "productqut": "1",
@@ -1549,7 +1549,7 @@
     },
     {
       "addcategoriename": "Accessories",
-      "productname": "HExtra Spacious",
+      "productname": "Hextra Spacious",
       "productimg": "https://rukminim2.flixcart.com/image/832/832/kqjtd3k0/hand-messenger-bag/i/n/l/orignal-sea-green-combo-messenger-bag-1-orignal-sea-green-combo-original-imag4j98pswu6zqe.jpeg?q=70",
       "productqut": "1",
       "productprice": "1699",
@@ -1557,118 +1557,6 @@
       "productaddedate": "2023-07-28",
       "productdescriptions": "Best Selling Womens handlebag easy to care. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore labore, recusandae reprehenderit voluptate reiciendis qui ipsa consectetur illo animi corporis repellat rerum. Deserunt debitis, non pariatur cupiditate magnam consectetur atque? ",
       "id": 68
-    }
-  ],
-  "Product-Details": [
-    {
-      "addcategoriename": "Mens",
-      "addsubcategoriename": "Wedding Cloths",
-      "productname": "Halidi Kurta",
-      "productimg": "https://rukminim2.flixcart.com/image/832/832/xif0q/ethnic-set/t/t/l/l-bk-502-flossy-original-imagpnjh5uxxwnpp.jpeg?q=70",
-      "productqut": "1",
-      "productprice": "1999",
-      "productoffer": "1055",
-      "productaddedate": "2023-07-25",
-      "productdescriptions": "Cheap wedding Men's Warm Large Size Parka Outerwear Fur Lined Long Fleece Thickening Hooded Men Cotton Blend Kurta and Pyjama Set. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore labore, recusandae reprehenderit voluptate reiciendis qui ipsa consectetur illo animi corporis repellat rerum. Deserunt debitis, non pariatur cupiditate magnam consectetur atque?",
-      "id": 17
-    },
-    {
-      "addcategoriename": "Mens",
-      "addsubcategoriename": "Monsoon Cloths",
-      "productname": "Heavy Raincort",
-      "productimg": "https://rukminim2.flixcart.com/image/832/832/xif0q/raincoat/t/b/x/l-41739-wildcraft-original-imag3ppmqzkkdyxj-bb.jpeg?q=70",
-      "productqut": "1",
-      "productprice": "1999",
-      "productoffer": "599",
-      "productaddedate": "2023-07-25",
-      "productdescriptions": "Cheap Winter Men's Warm Large Size Parka Outerwear Fur Lined Long Fleece Thickening Hooded. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore labore, recusandae reprehenderit voluptate reiciendis qui ipsa consectetur illo animi corporis repellat rerum. Deserunt debitis, non pariatur cupiditate magnam consectetur atque? ",
-      "id": 15
-    },
-    {
-      "addcategoriename": "Womens",
-      "addsubcategoriename": "All sesion",
-      "productname": "Trousers",
-      "productimg": "https://i.pinimg.com/736x/b5/d1/8c/b5d18c8da3a752a13160218bd3e942ed.jpg",
-      "productqut": "1",
-      "productprice": "1999",
-      "productoffer": " 999",
-      "productaddedate": "2023-07-26",
-      "productdescriptions": "Hand Wash Only❥Great for homewear, daily, casual look, lounge wear, party, hang out with friends, dating, school, holiday, travel, vacation, office Women Fit and Flare Red Dress. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore labore, recusandae reprehenderit voluptate reiciendis qui ipsa consectetur illo animi corporis repellat rerum. Deserunt debitis, non pariatur cupiditate magnam consectetur atque?",
-      "id": 20
-    }
-  ],
-  "Cart": [
-    {
-      "addcategoriename": "Mens",
-      "addsubcategoriename": "All sesion",
-      "productname": "Classic Spring",
-      "productimg": "https://images.unsplash.com/photo-1617137968427-85924c800a22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVucyUyMGZhc2hpb258ZW58MHx8MHx8fDA%3D&w=1000&q=80",
-      "productqut": "1",
-      "productprice": "6999",
-      "productoffer": " 3499",
-      "productaddedate": "2023-07-25",
-      "productdescriptions": "best cloths for men Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore labore, recusandae reprehenderit voluptate reiciendis qui ipsa consectetur illo animi corporis repellat rerum. Deserunt debitis, non pariatur cupiditate magnam consectetur atque?",
-      "id": 1
-    },
-    {
-      "addcategoriename": "Mens",
-      "addsubcategoriename": "All sesion",
-      "productname": "Classy Style",
-      "productimg": "https://www.tiptopgents.com/wp-content/uploads/2022/06/picsart_22-06-23_13-17-03-2948685519744956187826.webp",
-      "productqut": "1",
-      "productprice": "2999",
-      "productoffer": " 1799",
-      "productaddedate": "2023-07-25",
-      "productdescriptions": "best cloths for men Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore labore, recusandae reprehenderit voluptate reiciendis qui ipsa consectetur illo animi corporis repellat rerum. Deserunt debitis, non pariatur cupiditate magnam consectetur atque?",
-      "id": 6
-    },
-    {
-      "addcategoriename": "Mens",
-      "addsubcategoriename": "Summer Cloths",
-      "productname": "T-shirt",
-      "productimg": "https://rukminim2.flixcart.com/image/832/832/l1grgcw0/t-shirt/x/o/5/m-t428hs-tm5p-eyebogler-original-imagdf2egzjxeqgk.jpeg?q=70",
-      "productqut": "1",
-      "productprice": "1499",
-      "productoffer": "999",
-      "productaddedate": "2023-07-25",
-      "productdescriptions": "Cheap Summer Men's Warm Large Size Parka Outerwear Fur Lined Long Fleece Thickening Hooded Men Striped Polo Neck Cotton Blend Blue T-Shirt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore labore, recusandae reprehenderit voluptate reiciendis qui ipsa consectetur illo animi corporis repellat rerum. Deserunt debitis, non pariatur cupiditate magnam consectetur atque?",
-      "id": 8
-    },
-    {
-      "addcategoriename": "Mens",
-      "addsubcategoriename": "Winter Cloths",
-      "productname": "Jackets",
-      "productimg": "https://rukminim2.flixcart.com/image/832/832/kvgzyq80/thermal/q/s/q/85-ambwhnul-mel-gry-p-alfa-original-imag8db6duhd4kca.jpeg?q=70",
-      "productqut": "1",
-      "productprice": "999",
-      "productoffer": "599",
-      "productaddedate": "2023-07-25",
-      "productdescriptions": "Cheap Winter Men's Warm Large Size Parka Outerwear Fur Lined Long Fleece Thickening Hooded ALFA BodyWarmer High Neck Winter Wear Men Top Thermal. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore labore, recusandae reprehenderit voluptate reiciendis qui ipsa consectetur illo animi corporis repellat rerum. Deserunt debitis, non pariatur cupiditate magnam consectetur atque?",
-      "id": 12
-    },
-    {
-      "addcategoriename": "Womens",
-      "addsubcategoriename": "Wedding Cloths",
-      "productname": "Anarkali",
-      "productimg": "https://rukminim2.flixcart.com/image/832/832/xif0q/gown/s/g/8/na-xl-3-4-sleeve-stitched-fg11-krupanidhi-fashion-na-original-imagrgwg7fgafnrb.jpeg?q=70",
-      "productqut": "1",
-      "productprice": "1799",
-      "productoffer": "1099",
-      "productaddedate": "2023-07-26",
-      "productdescriptions": "Hand Wash Only❥Great for homewear, daily, casual look, lounge wear, party, hang out with friends, dating, school, holiday, travel, vacation, office Solid Georgette Stitched Anarkali Gown  (Pink). Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore labore, recusandae reprehenderit voluptate reiciendis qui ipsa consectetur illo animi corporis repellat rerum. Deserunt debitis, non pariatur cupiditate magnam consectetur atque?",
-      "id": 34
-    },
-    {
-      "addcategoriename": "Mens",
-      "addsubcategoriename": "Wedding Cloths",
-      "productname": "Halidi Kurta",
-      "productimg": "https://rukminim2.flixcart.com/image/832/832/xif0q/ethnic-set/t/t/l/l-bk-502-flossy-original-imagpnjh5uxxwnpp.jpeg?q=70",
-      "productqut": "1",
-      "productprice": "1999",
-      "productoffer": "1055",
-      "productaddedate": "2023-07-25",
-      "productdescriptions": "Cheap wedding Men's Warm Large Size Parka Outerwear Fur Lined Long Fleece Thickening Hooded Men Cotton Blend Kurta and Pyjama Set. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore labore, recusandae reprehenderit voluptate reiciendis qui ipsa consectetur illo animi corporis repellat rerum. Deserunt debitis, non pariatur cupiditate magnam consectetur atque?",
-      "id": 17
     }
   ]
 }

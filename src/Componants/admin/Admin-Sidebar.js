@@ -32,7 +32,7 @@ export default function AdminSidebar() {
                 <li className='dropdown '><Link to="/" data-bs-toggle="dropdown" className=' dropdown-toggle'>
                   <i className='fa fa-list-alt category-icons me-3 shadow rounded-3 '></i>
                   Add Category</Link>
-                  <ul className='dropdown-menu py-3 px-2' style={{ width: "215px"}}>
+                  <ul className='dropdown-menu py-3 px-2' style={{ width: "215px" }}>
                     <li><Link to="/admin-login/admin-add-category" className='text-black'>Add Category</Link></li>
                     <li><Link to="/admin-login/admin-manage-category" className='text-black'>
                       Manage Category </Link></li>

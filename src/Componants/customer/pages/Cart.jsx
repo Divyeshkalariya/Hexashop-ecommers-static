@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Footre from '../Footre';
 import Pagebanner from '../Pagebanner';
 import { Button, Col, Container, Form, InputGroup, Row } from 'react-bootstrap';
-import axios from 'axios';
 import { Scrollbars } from 'react-custom-scrollbars-2';
-import { useNavigate } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
+import $ from "jquery";
 
 export default function Catr() {
 
@@ -30,41 +28,27 @@ export default function Catr() {
   window.addEventListener('scroll', toggleVisible);
 
 
-  // ADD PRODUCT FROM API
-  const [product, setProduct] = useState([]);
-  // const Navigate = useNavigate('');
-
-  useEffect(() => {
-    axios.get('http://localhost:2602/Cart')
-      .then((res) => {
-        setProduct(res.data)
-      });
-  }, [])
-
-
-  //DELET ITEM FROM CART
-  const DeletProduct = (id) => {
-    axios.delete(`http://localhost:2602/Cart/${id}`)
-      .then(() => {
-        // toast('Product Remove From Cart', {
-        //   position: "top-right",
-        //   autoClose: 4000,
-        //   hideProgressBar: false,
-        //   closeOnClick: true,
-        //   pauseOnHover: true,
-        //   draggable: true,
-        //   progress: undefined,
-        //   theme: "colored",
-        // });
-        window.location="/cart";
-      })
+  {
+    $('.quantity button').on('click', function () {
+      var button = $(this);
+      var oldValue = button.parent().parent().find('input').val();
+      if (button.hasClass('btn-plus')) {
+        var newVal = parseFloat(oldValue) + 1;
+      } else {
+        if (oldValue > 0) {
+          var newVal = parseFloat(oldValue) - 1;
+        } else {
+          newVal = 0;
+        }
+      }
+      button.parent().parent().find('input').val(newVal);
+    });
   }
-
 
   return (
     <div>
       {/* pagebanner */}
-      <Pagebanner headline="Cart"/>
+      <Pagebanner headline="Cart" />
 
       {/* cart */}
       <Container fluid="true" id='cart'>
@@ -84,43 +68,124 @@ export default function Catr() {
                 </thead>
 
                 <tbody align="center">
-                  {product && product.map((item,cartindex) => {
-                    return (
-                      <tr key={item.id}>
-                        <td>{item.productname}</td>
-                        <td>{item.productoffer}</td>
-                        <td><img src={item.productimg} alt="product image" style={{ width: "50px", height: "70px" }} /></td>
-                        <td>
-                          <InputGroup className='quantity'>
-                            <Button variant='primary' className="btn-minus rounded-0 py-1 d-flex justify-content-center align-items-center"  onClick={() => {
-                              const Incqty = product.map((item, index) => {
-                                return cartindex === index ? {...item, productqut : parseInt(item.productqut) - 1} : item
-                              })
-                              setProduct(Incqty)
-                            }}>
-                              <i className="fa fa-minus"></i>
-                            </Button>
-                            <Form.Control
-                              value={item.productqut}
-                              className='rounded-0 text-center qty'
-                              readOnly
-                              minLength="0"
-                            />
-                            <button className="btn btn-sm btn-primary btn-plus rounded-0 py-1 d-flex justify-content-center align-items-center" onClick={() => {
-                              const Incqty = product.map((item, index) => {
-                                return cartindex === index ? {...item, productqut : parseInt(item.productqut) + 1} : item
-                              })
-                              setProduct(Incqty)
-                            }}>
-                              <i className="fa fa-plus"></i>
-                            </button>
-                          </InputGroup>
-                        </td>
-                        <td>{item.productoffer * item.productqut}</td>
-                        <td><i className='fa fa-trash text-danger fs-4' onClick={() => DeletProduct(item.id)}></i></td>
-                      </tr>
-                    )
-                  })}
+
+                  <tr>
+                    <td>Classic Spring</td>
+                    <td>3499</td>
+                    <td><img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVucyUyMGZhc2hpb258ZW58MHx8MHx8fDA%3D&w=1000&q=80" alt="product image" style={{ width: "50px", height: "70px" }} /></td>
+                    <td>
+                      <InputGroup className='quantity'>
+                        <Button className='btn btn-sm btn-primary btn-minus rounded-0 py-1 d-flex justify-content-center align-items-center' variant='primary'>
+                          <i className="fa fa-minus"></i>
+                        </Button>
+                        <Form.Control
+                          value="1"
+                          className='rounded-0 text-center qty'
+                          readOnly
+                          minLength="0"
+                        />
+                        <button className="btn btn-sm btn-primary btn-plus rounded-0 py-1 d-flex justify-content-center align-items-center ">
+                          <i className="fa fa-plus"></i>
+                        </button>
+                      </InputGroup>
+                    </td>
+                    <td>3499</td>
+                    <td><i className='fa fa-trash text-danger fs-4' ></i></td>
+                  </tr>
+                  <tr>
+                    <td>Popsuger</td>
+                    <td>1599</td>
+                    <td><img src="https://media1.popsugar-assets.com/files/thumbor/UPEB-LvSoc7hr_gJkASisJ8m9ow/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2014/05/19/829/n/1922564/e11061fd0ec3ed21_151989639/i/Youre-girl-all-your-friends-come-when-new-trend-pops-up.jpg" alt="product image" style={{ width: "50px", height: "70px" }} /></td>
+                    <td>
+                      <InputGroup className='quantity'>
+                        <Button variant='primary' className='btn btn-sm btn-primary btn-minus rounded-0 py-1 d-flex justify-content-center align-items-center'>
+                          <i className="fa fa-minus"></i>
+                        </Button>
+                        <Form.Control
+                          value="1"
+                          className='rounded-0 text-center qty'
+                          readOnly
+                          minLength="0"
+                        />
+                        <button className="btn btn-sm btn-primary btn-plus rounded-0 py-1 d-flex justify-content-center align-items-center">
+                          <i className="fa fa-plus"></i>
+                        </button>
+                      </InputGroup>
+                    </td>
+                    <td>1599</td>
+                    <td><i className='fa fa-trash text-danger fs-4' ></i></td>
+                  </tr>
+                  <tr>
+                    <td>Boys-Traditional</td>
+                    <td>1299</td>
+                    <td><img src="https://ik.imagekit.io/bhsa3gea8yj/products/tr:w-1200/products-2018/Nov-2021/Handloom-Silk-Kurta-Pajama-In-Light-Brown-Colour-BK2710911-A.jpg" alt="product image" style={{ width: "50px", height: "70px" }} /></td>
+                    <td>
+                      <InputGroup className='quantity'>
+                        <Button className='btn btn-sm btn-primary btn-minus rounded-0 py-1 d-flex justify-content-center align-items-center' variant='primary'>
+                          <i className="fa fa-minus"></i>
+                        </Button>
+                        <Form.Control
+                          value="1"
+                          className='rounded-0 text-center qty'
+                          readOnly
+                          minLength="0"
+                        />
+                        <button className="btn btn-sm btn-primary btn-plus rounded-0 py-1 d-flex justify-content-center align-items-center">
+                          <i className="fa fa-plus"></i>
+                        </button>
+                      </InputGroup>
+                    </td>
+                    <td>1299</td>
+                    <td><i className='fa fa-trash text-danger fs-4' ></i></td>
+                  </tr>
+                  <tr>
+                    <td>Kids Watch</td>
+                    <td>999</td>
+                    <td><img src="https://m.media-amazon.com/images/I/71DMUQgia5L._UY500_.jpg" style={{ width: "50px", height: "70px" }} /></td>
+                    <td>
+                      <InputGroup className='quantity'>
+                        <Button className='btn btn-sm btn-primary btn-minus rounded-0 py-1 d-flex justify-content-center align-items-center' variant='primary'>
+                          <i className="fa fa-minus"></i>
+                        </Button>
+                        <Form.Control
+                          value="1"
+                          className='rounded-0 text-center qty'
+                          readOnly
+                          minLength="0"
+                        />
+                        <button className="btn btn-sm btn-primary btn-plus rounded-0 py-1 d-flex justify-content-center align-items-center">
+                          <i className="fa fa-plus"></i>
+                        </button>
+                      </InputGroup>
+                    </td>
+                    <td>999</td>
+                    <td><i className='fa fa-trash text-danger fs-4' ></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>leather Belt</td>
+                    <td>799</td>
+                    <td><img src="https://m.media-amazon.com/images/I/61KOrK1kdpL._UX522_.jpg" style={{ width: "50px", height: "70px" }} /></td>
+                    <td>
+                      <InputGroup className='quantity'>
+                        <Button className='btn btn-sm btn-primary btn-minus rounded-0 py-1 d-flex justify-content-center align-items-center' variant='primary'>
+                          <i className="fa fa-minus"></i>
+                        </Button>
+                        <Form.Control
+                          value="1"
+                          className='rounded-0 text-center qty'
+                          readOnly
+                          minLength="0"
+                        />
+                        <button className="btn btn-sm btn-primary btn-plus rounded-0 py-1 d-flex justify-content-center align-items-center">
+                          <i className="fa fa-plus"></i>
+                        </button>
+                      </InputGroup>
+                    </td>
+                    <td>1,899</td>
+                    <td><i className='fa fa-trash text-danger fs-4' ></i></td>
+                  </tr>
+
                 </tbody>
               </table>
             </Scrollbars>
@@ -128,7 +193,7 @@ export default function Catr() {
           <Col sm={11} md={4} lg={4} className='col-12 mx-auto h-100'>
             <div className='mt-3 mt-md-0 mt-lg-0'>
               <div className='pb-3 added'>
-                <h3><span className='text-primary'>{product.length}</span> Products Added In Cart</h3>
+                <h3><span className='text-primary'>5</span> Products Added In Cart</h3>
               </div>
               <InputGroup className="mb-3 mb-sm-3 mb-md-5 mb-lg-5 border border-black">
                 <Form.Control
@@ -148,8 +213,7 @@ export default function Catr() {
                   className='rounded-0 py-3 border border-bottom-1 border-top-0 border-start-0 border-end-0 border-black text-center'
                 />
                 <Form.Control
-                  value={product.map(item => item.productoffer * item.productqut).reduce((total, value) =>(parseInt(total) + parseInt(value)), 0)
-                  }
+                  value="Rs. 9,295"
                   readOnly
                   className='rounded-0 py-3 border border-bottom-1 border-top-0 border-start-0 border-end-0 border-black text-center'
                 />
@@ -161,12 +225,12 @@ export default function Catr() {
                   className='rounded-0 py-3 border border-bottom-1 border-top-0 border-start-0 border-end-0 border-black text-center'
                 />
                 <Form.Control
-                  defaultValue="00"
+                  defaultValue="Rs. 00"
                   className='rounded-0 py-3 border border-bottom-1 border-top-0 border-start-0 border-end-0 border-black text-center'
                 />
               </InputGroup>
               <div>
-                <Button variant='warning' className='w-100 rounded-0 py-2 fs-5' href='/Checkout'>
+                <Button variant='warning' className='w-100 rounded-0 py-2 fs-5' href='/checkout'>
                   CheckOut
                 </Button>
               </div>
@@ -182,6 +246,6 @@ export default function Catr() {
       <button href="#header" onClick={scrollToTop} className="scroll-top bg-dark" data-aos="zoom-in" data-aos-duration="1000"> <i className="fa fa-angle-up"></i></button>
 
 
-    </div >
+    </div>
   )
 }

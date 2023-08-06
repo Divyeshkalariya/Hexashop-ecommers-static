@@ -30,8 +30,6 @@ import Footre from '../Footre';
 import Export from '../Exportprojects';
 import HomeSlider from '../HomeSlider';
 import CustomerReview from '../CustomerReview';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
 
 export default function Home() {
 
@@ -47,19 +45,9 @@ export default function Home() {
     }
   };
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo(0,0);
   };
   window.addEventListener('scroll', toggleVisible);
-
-  // FATCH CATEGORY
-  const [category , setCategory] = useState([])
-  useEffect(() => {
-    axios.get("http://localhost:2602/AddCategories")
-      .then(res => setCategory(res.data))
-  })
 
   return (
     <Fragment>
@@ -88,7 +76,7 @@ export default function Home() {
                   <div className='text-white'>
                     <h2>Women</h2>
                     <p>Best Cloths For Womens</p>
-                    <Button variant='outline-warning' href='/Products#women' className='rounded-0'>Watch More</Button>
+                    <Button variant='outline-warning' href='/Products#womens-products' className='rounded-0'>Watch More</Button>
                   </div>
                 </div>
               </Col>
@@ -100,7 +88,7 @@ export default function Home() {
                   <div className='text-white'>
                     <h2>Men</h2>
                     <p>Best Cloths For Mens</p>
-                    <Button variant='outline-warning' href='/Products#men' className='rounded-0'>Watch More</Button>
+                    <Button variant='outline-warning' href='/Products#mens-products' className='rounded-0'>Watch More</Button>
                   </div>
                 </div>
               </Col>
@@ -112,7 +100,7 @@ export default function Home() {
                   <div>
                     <h2>Kids</h2>
                     <p>Best Cloths For Kids</p>
-                    <Button variant='outline-warning' href='/Products#kid' className='rounded-0'>Watch More</Button>
+                    <Button variant='outline-warning' href='/Products#kids-products' className='rounded-0'>Watch More</Button>
                   </div>
                 </div>
               </Col>
@@ -124,7 +112,7 @@ export default function Home() {
                   <div className=''>
                     <h2>Accessories</h2>
                     <p>Best Trend Accessories</p>
-                    <Button variant='outline-warning' className='rounded-0'>Watch More</Button>
+                    <Button variant='outline-warning' className='rounded-0' href='/Products#accessories'>Watch More</Button>
                   </div>
                 </div>
               </Col>
@@ -137,27 +125,7 @@ export default function Home() {
       <Container fluid="true" className='mt-3 mt-md-4 mt-lg-5'>
         <HomeSlider />
       </Container>
-
-      {/* category section start */}
-      {/* <Container fluid="true" id='category'>
-        <Row className='p-5'>
-          <Col className=' col-3 category-left m-0'>
-            <h2>Categories</h2>
-            <ul className='category-list'>
-              { category.map((item) => {
-                return(
-                  <li key={item.id}>
-                    <i className='fa fa-arrow-right'></i>
-                    <Link>{item.categoryname}</Link>
-                  </li>
-                )
-              })}
-            </ul>
-          </Col>
-          <Col className='p-5 col-9 category-right'></Col>
-        </Row>
-      </Container> */}
-
+      
       {/* mens section start */}
       <Container fluid="true" className='py-0 pb-md-2 pb-lg-5' id='mens'>
         <Col className='product-head d-flex justify-content-between'>
@@ -166,7 +134,7 @@ export default function Home() {
             <p>Best mens collection for all sesons. must visit.</p>
           </div>
           <div className='col-3 d-flex justify-content-end align-items-start'>
-            <Button className='mt-2' variant='outline-dark'>Show More</Button>
+            <Button className='mt-2' variant='outline-dark' href='/Products#mens-products'>Show More</Button>
           </div>
         </Col>
         {/* Menproductslider */}
@@ -184,7 +152,7 @@ export default function Home() {
             <p>Best womens collection for all sesons. must visit.</p>
           </div>
           <div className='col-3 d-flex justify-content-end align-items-start'>
-            <Button className='mt-2' variant='outline-dark'>Show More</Button>
+            <Button className='mt-2' variant='outline-dark' href='/Products#womens-products'>Show More</Button>
           </div>
         </Col>
         {/* womenproductslider */}
@@ -202,7 +170,7 @@ export default function Home() {
             <p>Best kids collection for all sesons. must visit.</p>
           </div>
           <div className='col-3 d-flex justify-content-end align-items-start'>
-            <Button className='mt-2' variant='outline-dark'>Show More</Button>
+            <Button className='mt-2' variant='outline-dark' href='/Products#kids-products'>Show More</Button>
           </div>
         </Col>
         {/* kidsproductslider */}

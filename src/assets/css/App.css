@@ -414,24 +414,6 @@ body {
     left: -55px !important;
 }
 
-/* #mens .slick-prev,
-#mens .slick-next,
-#womens .slick-prev,
-#womens .slick-next,
-#kids .slick-prev,
-#kids .slick-next {
-    display: block !important;
-    transform: translateY(-25px) !important;
-}
-
-.slick-next::before,
-.slick-prev::before {
-    color: var(--black) !important;
-    font-size: 3rem !important;
-    margin: 0;
-    padding: 0;
-} */
-
 .slick-main {
     width: 80%;
     margin-left: 10%;

@@ -1,9 +1,8 @@
-import React, { Fragment, useRef, useState, useEffect } from 'react';
+import React, { Fragment, useState } from 'react';
 import Footre from '../Footre';
 import { Button, Col, Container, FloatingLabel, Form, Row } from 'react-bootstrap';
-import axios from 'axios';
-import swal from 'sweetalert';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 export default function Account() {
 
@@ -28,78 +27,16 @@ export default function Account() {
     window.addEventListener('scroll', toggleVisible);
 
 
-    // CREATE ACCOUNT FORM JS FOR SENDING DATA TO ADMIN
-    const username = useRef("");
-    const state = useRef("");
-    const city = useRef("");
-    const email = useRef("");
-    const password = useRef("");
-    const confirmpassword = useRef("");
-    const dateofbirth = useRef("");
-    const gender = useRef("");
-    const Navigate = useNavigate();
-
     const SandAccountData = () => {
-
-        // store account form data form of variable 
-        const insert = {
-            username: username.current.value,
-            state: state.current.value,
-            city: city.current.value,
-            email: email.current.value,
-            password: password.current.value,
-            confirmpassword: confirmpassword.current.value,
-            dateofbirth: dateofbirth.current.value,
-            gender: gender.current.value,
-        }
-
-        //add data in json file via link
-        axios.post("http://localhost:2602/Accountdata", insert)
-            .then(() => {
-                swal("Thank You For Create Account")
-                window.location="/Account"
-            });
-
+        Swal.fire({
+            icon: 'success',
+            title: 'Account',
+            text: 'Create Successfully',
+        });
+        setTimeout(() => {
+            window.location = "/Account"
+        }, 2000);
     }
-
-    //FATCH DATA IN STATE
-    const [addstate, setAddState] = useState([]);
-    useEffect(() => {
-        axios.get('http://localhost:2602/AddState')
-            .then(res => setAddState(res.data))
-    }, [])
-
-    //FATCH DATA IN CITY
-    const [addcity, setAddCity] = useState([]);
-    useEffect(() => {
-        axios.get('http://localhost:2602/AddCity')
-            .then(res => setAddCity(res.data))
-    }, [])
-
-    // FORM VALIDATION USING HOOKS
-    // const [form, setForm] = useState({
-    //     username: "",
-    //     state: "",
-    //     city: "",
-    //     email: "",
-    //     password: "",
-    //     confirmpassword: "",
-    //     gender: "",
-    //     dateofbirth: ""
-    // });
-
-    // const onUpdateField = e => {
-    //     const nextFormState = {
-    //         ...form,
-    //         [e.target.name]: e.target.value,
-    //     };
-    //     setForm(nextFormState);
-    // };
-
-    // const onSubmitForm = e => {
-    //     e.preventDefault();
-    //     SandAccountData();
-    // };
 
     return (
         <Fragment>
@@ -109,30 +46,23 @@ export default function Account() {
 
                 <Row className='pb-5'>
                     <Col sm={12} md={12} lg={12} className='col-10 mx-auto'>
-                        <Form className='w-75 mx-auto has-validation' 
-                        // onSubmit={onSubmitForm} 
+                        <Form className='w-75 mx-auto has-validation'
                         >
                             <Row>
                                 <Col className='col-12 col-md-6 col-lg-6' >
                                     <FloatingLabel controlId="floatingInput" label="Username" className="mb-3">
                                         <Form.Control
                                             type="text" placeholder="Username"
-                                            ref={username}
                                             name="username"
-                                            // value={form.username}
-                                            // onChange={onUpdateField} 
-                                            />
+                                        />
                                     </FloatingLabel>
                                 </Col>
 
                                 <Col className='col-12 col-md-6 col-lg-6'>
                                     <FloatingLabel controlId="floatingDate" label="Date-Of-Birth" className="mb-3">
                                         <Form.Control type="date"
-                                            ref={dateofbirth}
                                             name="dateofbirth"
-                                            // value={form.dateofbirth}
-                                            // onChange={onUpdateField} 
-                                            />
+                                        />
                                     </FloatingLabel>
                                 </Col>
 
@@ -140,14 +70,11 @@ export default function Account() {
                                     <select
                                         type="text"
                                         className='form-control form-select mb-3'
-                                        ref={state}
                                     >
                                         <option>- Select State -</option>
-                                        {addstate && addstate.map((item) => {
-                                            return (
-                                                <option value={item.state} key={item.id}>{item.state}</option>
-                                            )
-                                        })}
+                                        <option>Gujarat</option>
+                                        <option>Rajesthan</option>
+                                        <option>Delhi</option>
                                     </select>
                                 </Col>
 
@@ -155,14 +82,13 @@ export default function Account() {
                                     <select
                                         type="text"
                                         className='form-control form-select mb-3'
-                                        ref={city}
                                     >
                                         <option>- Select City -</option>
-                                        {addcity && addcity.map((item) => {
-                                            return (
-                                                <option value={item.city} key={item.id}>{item.city}</option>
-                                            )
-                                        })}
+                                        <option>Rajkot</option>
+                                        <option>Junagadh</option>
+                                        <option>Nathdwar</option>
+                                        <option>Ahmedabad</option>
+                                        <option>Delhi</option>
                                     </select>
                                 </Col>
 
@@ -170,43 +96,33 @@ export default function Account() {
                                     <FloatingLabel controlId="floatingEmail" label="Email" className="mb-3">
                                         <Form.Control
                                             type="email" placeholder="Email"
-                                            ref={email}
                                             name='email'
-                                            // value={form.email}
-                                            // onChange={onUpdateField}
-                                            />
+                                        />
                                     </FloatingLabel>
                                 </Col>
 
                                 <Col className='col-12 col-md-6 col-lg-6'>
                                     <FloatingLabel controlId="floatingPassword" label="Password" className="mb-3">
-                                        <Form.Control 
-                                            type="password" placeholder="Password" 
-                                            ref={password}
+                                        <Form.Control
+                                            type="password" placeholder="Password"
                                             name='password'
-                                            // value={form.password}
-                                            // onChange={onUpdateField} 
-                                            />
+                                        />
                                     </FloatingLabel>
                                 </Col>
 
                                 <Col className='col-12 col-md-6 col-lg-6'>
                                     <FloatingLabel controlId="floatingPassword" label="Confirm Password" className="mb-3">
-                                        <Form.Control type="password" placeholder="Confirm Password" ref={confirmpassword}
+                                        <Form.Control type="password" placeholder="Confirm Password"
                                             name="confirmpassword"
-                                            // value={form.confirmPassword}
-                                            // onChange={onUpdateField}
-                                            />
+                                        />
                                     </FloatingLabel>
                                 </Col>
 
                                 <Col className='col-12 col-md-6 col-lg-6'>
                                     <FloatingLabel controlId="floatingGener" label="Gender" className="mb-3">
-                                        <Form.Select type="text" placeholder="Confirm Password" ref={gender}
+                                        <Form.Select type="text" placeholder="Confirm Password"
                                             name="gender"
-                                            // value={form.gender}
-                                            // onChange={onUpdateField}
-                                            >
+                                        >
                                             <option value="select">Select Gender</option>
                                             <option value="male">Male</option>
                                             <option value="female">Female</option>
@@ -218,6 +134,7 @@ export default function Account() {
                                     <Button type='button' className='w-100 p-3' onClick={SandAccountData}>Create Account</Button>
                                 </Col>
                             </Row>
+                            <p className='text-center mt-3'>Already have account <Link to="/login" className='text-primary'>Login Here?</Link></p>
                         </Form>
                     </Col>
                 </Row>

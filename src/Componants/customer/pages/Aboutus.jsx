@@ -14,7 +14,6 @@ import Aboutcontact from '../Aboutcontact';
 
 // footer section
 import Footre from '../Footre';
-import axios from 'axios';
 
 
 export default function Aboutus() {
@@ -31,21 +30,9 @@ export default function Aboutus() {
     }
   };
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo(0, 0);
   };
   window.addEventListener('scroll', toggleVisible);
-
-  // OUR TEAM DATA
-  const [ourteam, setOurteam] = useState([])
-  useEffect(() => {
-    axios.get(" http://localhost:2602/Ourteamcarddata")
-      .then((response) => {
-        setOurteam(response.data)
-      })
-  }, [])
 
 
   // OUR BRAND SLIDER 
@@ -58,10 +45,10 @@ export default function Aboutus() {
     pauseOnHover: false,
     slidesToShow: 3,
     autoplay: true,
-    lazyLoad : true,
+    lazyLoad: true,
     autoplaySpeed: 3000,
-    speed : 1000,
-    dots : true,
+    speed: 1000,
+    dots: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -90,15 +77,6 @@ export default function Aboutus() {
     ]
   }
 
-  const [ourbrand, setOurbrand] = useState([0])
-  useEffect(() => {
-    axios.get("http://localhost:2602/Ourbrands")
-      .then((response) => {
-        setOurbrand(response.data)
-      })
-  }, [])
-
-
 
   return (
     <Fragment>
@@ -125,7 +103,7 @@ export default function Aboutus() {
                 </Col>
               </Row>
               <p className='mt-3 mt-lg-2 mt-sm-1' data-aos="fade-up" data-aos-duration="1000">My feeling about work is it’s much more about the experience of doing is than the end product. Sometimes things t0hat are really great and make lots of money are miserable to make, and vice versa.</p>
-              <div className='dots'></div>
+              <Col className='dots'></Col>
               <ul className='social-icons mt-3 mt-md-2' >
                 <li className='rounded-circle' data-aos="zoom-in" data-aos-duration="1000"><Link to="/" className='fa fa-facebook-f text-decoration-none fs-4 text-white m-0 p-0'></Link></li>
                 <li className='rounded-circle' data-aos="zoom-in" data-aos-duration="1000"><Link to="/" className='fa fa-twitter text-decoration-none fs-4 text-white'></Link></li>
@@ -147,29 +125,65 @@ export default function Aboutus() {
         </Container>
         <Row className='container mx-auto mt-5 mt-md-5 mt-lg-5'>
 
-          {ourteam && ourteam.map((item) => {
-            return (
-              <Col size={12} md={4} lg={4} data-aos="fade-up" data-aos-duration="1000" key={item.id}>
-                <div className='ourteam-card position-relative'>
-                  <Col className='ourteam-front position-absolute' >
-                    <img src={item.photo} alt="team member-1" className='img-fluid' />
-                  </Col>
-                  <Col className='ourteam-back position-absolute d-flex justify-content-center align-items-center'>
-                    <ul className='ourteam-social w-100 d-flex justify-content-evenly'>
-                      <li className='rounded-circle'><Link to="/" className='fa fa-facebook-f text-decoration-none text-white m-0 p-0'></Link></li>
-                      <li className='rounded-circle'><Link to="/" className='fa fa-twitter text-decoration-none  text-white'></Link></li>
-                      <li className='rounded-circle'><Link to="/" className='fa fa-linkedin text-decoration-none text-white'></Link></li>
-                      <li className='rounded-circle'><Link to="/" className='fa fa-behance text-decoration-none  text-white'></Link></li>
-                    </ul>
-                  </Col>
-                </div>
-                <div className='ourteam-info text-center mt-3'>
-                  <h3>{item.name}</h3>
-                  <p>{item.post}</p>
-                </div>
+
+          <Col size={12} md={4} lg={4} data-aos="fade-up" data-aos-duration="1000">
+            <Col className='ourteam-card position-relative'>
+              <Col className='ourteam-front position-absolute' >
+                <img src="https://images.unsplash.com/photo-1659333092645-0da4df62daa4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHw%3D&w=1000&q=80" alt="team member-1" className='img-fluid' />
               </Col>
-            )
-          })}
+              <Col className='ourteam-back position-absolute d-flex justify-content-center align-items-center'>
+                <ul className='ourteam-social w-100 d-flex justify-content-evenly'>
+                  <li className='rounded-circle'><Link to="/" className='fa fa-facebook-f text-decoration-none text-white m-0 p-0'></Link></li>
+                  <li className='rounded-circle'><Link to="/" className='fa fa-twitter text-decoration-none  text-white'></Link></li>
+                  <li className='rounded-circle'><Link to="/" className='fa fa-linkedin text-decoration-none text-white'></Link></li>
+                  <li className='rounded-circle'><Link to="/" className='fa fa-behance text-decoration-none  text-white'></Link></li>
+                </ul>
+              </Col>
+            </Col>
+            <Col className='ourteam-info text-center mt-3'>
+              <h3>Jiya Sinoya</h3>
+              <p>Marketing Head</p>
+            </Col>
+          </Col>
+          <Col size={12} md={4} lg={4} data-aos="fade-up" data-aos-duration="1000">
+            <Col className='ourteam-card position-relative'>
+              <Col className='ourteam-front position-absolute' >
+                <img src="https://images.pexels.com/photos/842811/pexels-photo-842811.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-842811.jpg&fm=jpg" alt="team member-1" className='img-fluid' />
+              </Col>
+              <Col className='ourteam-back position-absolute d-flex justify-content-center align-items-center'>
+                <ul className='ourteam-social w-100 d-flex justify-content-evenly'>
+                  <li className='rounded-circle'><Link to="/" className='fa fa-facebook-f text-decoration-none text-white m-0 p-0'></Link></li>
+                  <li className='rounded-circle'><Link to="/" className='fa fa-twitter text-decoration-none  text-white'></Link></li>
+                  <li className='rounded-circle'><Link to="/" className='fa fa-linkedin text-decoration-none text-white'></Link></li>
+                  <li className='rounded-circle'><Link to="/" className='fa fa-behance text-decoration-none  text-white'></Link></li>
+                </ul>
+              </Col>
+            </Col>
+            <Col className='ourteam-info text-center mt-3'>
+              <h3>Rembo Diza</h3>
+              <p>Creatore</p>
+            </Col>
+          </Col>
+          <Col size={12} md={4} lg={4} data-aos="fade-up" data-aos-duration="1000">
+            <Col className='ourteam-card position-relative'>
+              <Col className='ourteam-front position-absolute' >
+                <img src="https://burst.shopifycdn.com/photos/bearded-young-man.jpg?width=1200&format=pjpg&exif=1&iptc=1" alt="team member-1" className='img-fluid' />
+              </Col>
+              <Col className='ourteam-back position-absolute d-flex justify-content-center align-items-center'>
+                <ul className='ourteam-social w-100 d-flex justify-content-evenly'>
+                  <li className='rounded-circle'><Link to="/" className='fa fa-facebook-f text-decoration-none text-white m-0 p-0'></Link></li>
+                  <li className='rounded-circle'><Link to="/" className='fa fa-twitter text-decoration-none  text-white'></Link></li>
+                  <li className='rounded-circle'><Link to="/" className='fa fa-linkedin text-decoration-none text-white'></Link></li>
+                  <li className='rounded-circle'><Link to="/" className='fa fa-behance text-decoration-none  text-white'></Link></li>
+                </ul>
+              </Col>
+            </Col>
+            <Col className='ourteam-info text-center mt-3'>
+              <h3>Jemmy Roy</h3>
+              <p>Producion Head</p>
+            </Col>
+          </Col>
+
         </Row>
       </Container>
 
@@ -193,7 +207,7 @@ export default function Aboutus() {
               <p className='px-lg-3' >try to pay by Credit-card or Debit-card via a secure payment method, and talk to the owner over the phone.</p>
             </Col>
             <Col md={5} lg={5} className='col-7 mt-4 mt-lg-5 mx-auto text-center servicecard-head shadow  p-4' data-aos="fade-up" data-aos-duration="1000">
-            <sub><i className='fa fa-truck fs-3'></i></sub><i className='fa fa-map-pin fs-1'></i>
+              <sub><i className='fa fa-truck fs-3'></i></sub><i className='fa fa-map-pin fs-1'></i>
               <h2 className='mt-lg-3'>Tracking</h2>
               <p className='px-lg-3' >We allow the customer to know; whether the item has left the warehouse, where it is within the delivery process, and the estimated delivery date and time.</p>
             </Col>
@@ -215,17 +229,48 @@ export default function Aboutus() {
           </Col>
           <Row className='mt-lg-5 servicecard-row pb-5'>
 
-            <div>
+            <Col>
               <Slider {...settings}>
-                {ourbrand && ourbrand.map((item) => {
-                  return (
-                    <div key={item.id} className='slidebox' data-aos="zoom-in-down" data-aos-duration="1000">
-                      <img src={item.image} alt={item.brandname} className='img-fluid h-100 mx-auto' />
-                    </div>
-                  )
-                })}
+
+                <Col className='slidebox' data-aos="zoom-in-down" data-aos-duration="1000">
+                  <img src="https://assets.turbologo.com/blog/en/2019/10/19084949/chanel-logo-illustration-958x575.jpg" alt="chanel" className='img-fluid h-100 mx-auto' />
+                </Col>
+                <Col className='slidebox' data-aos="zoom-in-down" data-aos-duration="1000">
+                  <img src="https://cdn.logojoy.com/wp-content/uploads/2018/05/30143359/2_big1.png" alt="adidas" className='img-fluid h-100 mx-auto' />
+                </Col>
+                <Col className='slidebox' data-aos="zoom-in-down" data-aos-duration="1000">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKsfNjArDCu_twsJ4Uy_53s2Ex4C_Bc1R01w&usqp=CAU" alt="tommy hilfiger" className='img-fluid h-100 mx-auto' />
+                </Col>
+                <Col className='slidebox' data-aos="zoom-in-down" data-aos-duration="1000">
+                  <img src="https://assets.turbologo.com/blog/en/2020/01/19084715/georgio-armani-logo.png" alt="giorgio armani" className='img-fluid h-100 mx-auto' />
+                </Col>
+                <Col className='slidebox' data-aos="zoom-in-down" data-aos-duration="1000">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmAZ3ibGPIIefPGBsIWPnnQV_BxhNT4mWRsEaKlrjblfG4e_zL0oCgeQHzewz8tFInu2U&usqp=CAU" alt="boos" className='img-fluid h-100 mx-auto' />
+                </Col>
+                <Col className='slidebox' data-aos="zoom-in-down" data-aos-duration="1000">
+                  <img src="https://2.bp.blogspot.com/-NxanX5aQYl4/ULcnuIOQ9JI/AAAAAAAABCc/d3h_JbhSSzA/s1600/d_g_logo.jpg" alt="dolce & gabbana" className='img-fluid h-100 mx-auto' />
+                </Col>
+                <Col className='slidebox' data-aos="zoom-in-down" data-aos-duration="1000">
+                  <img src="https://assets.turbologo.ru/blog/ru/2021/11/12082225/Levis_logo.png" alt="Lavi's" className='img-fluid h-100 mx-auto' />
+                </Col>
+                <Col className='slidebox' data-aos="zoom-in-down" data-aos-duration="1000">
+                  <img src="https://images-cdn.ubuy.co.in/6351dcb31b0725417f0531d8-u-s-polo-assn-girls-39-school.jpg" alt="us polo" className='img-fluid h-100 mx-auto' />
+                </Col>
+                <Col className='slidebox' data-aos="zoom-in-down" data-aos-duration="1000">
+                  <img src="https://businesstalkmagazine.com/wp-content/uploads/2022/05/Allen-Solly.jpg" alt="allen solly" className='img-fluid h-100 mx-auto' />
+                </Col>
+                <Col className='slidebox' data-aos="zoom-in-down" data-aos-duration="1000">
+                  <img src="https://images-platform.99static.com/PEg4SNAR9Tf5hkfr62D4RVw2a-Q=/500x500/top/smart/99designs-contests-attachments/45/45279/attachment_45279240" alt="louis philippe" className='img-fluid h-100 mx-auto' />
+                </Col>
+                <Col className='slidebox' data-aos="zoom-in-down" data-aos-duration="1000">
+                  <img src="https://www.logolynx.com/images/logolynx/74/7476d45ced6a8a7cb5b4ae7f61cf8016.jpeg" alt="H & M" className='img-fluid h-100 mx-auto' />
+                </Col>
+                <Col className='slidebox' data-aos="zoom-in-down" data-aos-duration="1000">
+                  <img src="https://wallpapercave.com/wp/wp2013016.png" alt="calvin klein" className='img-fluid h-100 mx-auto' />
+                </Col>
+
               </Slider>
-            </div>
+            </Col>
           </Row>
         </Container>
       </Container>

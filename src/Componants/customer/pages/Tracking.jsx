@@ -1,8 +1,26 @@
-import React, { Fragment } from 'react'
-import { Col, Container } from 'react-bootstrap'
+import React, { Fragment,useState } from 'react'
+import { Container } from 'react-bootstrap'
 import Footre from '../Footre'
 
 export default function Tracking() {
+
+  const [visible, setVisible] = useState(false)
+
+  const toggleVisible = () => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 300) {
+      setVisible(true)
+    }
+    else if (scrolled <= 300) {
+      setVisible(false)
+    }
+  };
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+  window.addEventListener('scroll', toggleVisible);
+
+
   return (
     <Fragment>
       <Container id='tracking' className='py-4'>
@@ -24,13 +42,18 @@ export default function Tracking() {
         </div>
 
         <div>
-          <input type='checkbox'/> Notify my when my order is delivered
+          <input type='checkbox' /> Notify my when my order is delivered
         </div>
 
       </Container>
 
       {/* footer */}
       <Footre />
+
+      {/* scroll top arrow */}
+      <button href="#header" onClick={scrollToTop} className="scroll-top bg-dark" data-aos="zoom-in" data-aos-duration="1000"> <i className="fa fa-angle-up"></i></button>
+
+
     </Fragment>
   )
 }
