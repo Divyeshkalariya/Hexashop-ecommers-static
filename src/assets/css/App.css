@@ -609,9 +609,9 @@ body {
         font-size: 0.7rem;
     }
 
-    .product-head button {
-        font-size: 0.5rem;
-        padding: 5px;
+    .product-head .mt-2 {
+        font-size: 0.5rem !important;
+        padding: 5px !important;
     }
 
     .product-card img {
@@ -642,6 +642,7 @@ body {
         font-size: 1.2rem;
     }
 }
+
 
 /* woproduct section style */
 #womens {
