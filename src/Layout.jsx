@@ -223,7 +223,7 @@ export default function Layout() {
                                     data-bs-target=".navbar-collapse.show"
                                     onClick={Hidemenu}
                                 >
-                                    Account
+                                    Register
                                 </span>
                             </Link>
                         </Nav>
